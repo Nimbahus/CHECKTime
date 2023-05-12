@@ -13,21 +13,10 @@ struct TimeTrackerView: View {
 
     @State var trackerButtonImageSource: String = "play.fill"
     @State var isPaused: Bool = true
-    
-    @State var timerText = ""
     @State var progress: Double = 0
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+    
     var body: some View {
         VStack {
-            Text(timerText)
-                .font(.largeTitle)
-                .bold()
-                .onReceive(timer) { _ in
-                    if !isPaused {
-                        updateTimer()
-                    }
-                }
             Spacer()
             ZStack {
                 ZStack {
@@ -74,24 +63,6 @@ struct TimeTrackerView: View {
         }
     }
     
-    func updateTimer() {
-        model.currentSeconds += 1
-        if model.maxTimeAvailable && model.currentSeconds < model.maxSeconds {
-            timerText = prettyPrintSecondsLeft(seconds: model.maxSeconds - model.currentSeconds)
-            progress = Double(model.currentSeconds) / Double(model.maxSeconds)
-        } else {
-            timerText = prettyPrintSecondsLeft(seconds: model.currentSeconds)
-            progress = Double(model.currentSeconds % 3600) / Double(3600)
-        }
-    }
-    
-    func prettyPrintSecondsLeft(seconds: Int) -> String {
-        let hour = seconds / 3600
-        let minute = seconds / 60 % 60
-        let second = seconds % 60
-
-        return String(format: "%02i:%02i:%02i", hour, minute, second)
-    }
 }
 
 
