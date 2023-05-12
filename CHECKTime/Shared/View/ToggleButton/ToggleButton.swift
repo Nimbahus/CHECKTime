@@ -12,9 +12,17 @@ struct ToggleButton: View {
     @StateObject private var viewModel: ViewModel
     
     var body: some View {
-        Button(viewModel.title) {
+        Button(action: {
             viewModel.action?()
+        }) {
+            HStack {
+                if let iconName = viewModel.iconName {
+                    Image(systemName: iconName)
+                }
+                Text(viewModel.title)
+            }
         }
+        .buttonStyle(StandardButtonStyle(isActive: $viewModel.isActive, color: viewModel.color))
     }
     
     init(viewModel: ViewModel) {
@@ -24,6 +32,9 @@ struct ToggleButton: View {
 
 struct ToggleButton_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleButton(viewModel: .init())
+        VStack {
+            ToggleButton(viewModel: .init(isActive: true))
+            ToggleButton(viewModel: .init(isActive: false))
+        }
     }
 }
