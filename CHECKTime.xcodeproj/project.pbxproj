@@ -21,6 +21,8 @@
 		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
 		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
 		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
+		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
+		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		0FC5A5AD2A0E67430005955E /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
 		0FC5A5AF2A0E680F0005955E /* DayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
 		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
+		BC773C232A0E675200499D02 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BC773C1F2A0E670300499D02 /* View */,
 				0FC5A5A52A0E60CF0005955E /* Model */,
 			);
 			path = Shared;
@@ -231,6 +236,23 @@
 				0FC5A5B12A0E681D0005955E /* Activity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BC773C1F2A0E670300499D02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C202A0E670C00499D02 /* ToggleButton */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC773C202A0E670C00499D02 /* ToggleButton */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */,
+				BC773C232A0E675200499D02 /* ToggleButton.swift */,
+			);
+			path = ToggleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,9 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
+				BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
