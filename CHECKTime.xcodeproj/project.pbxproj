@@ -21,6 +21,8 @@
 		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
 		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
 		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
+		8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */; };
+		8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */; };
 		0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B52A0E7F8C0005955E /* DayEntryMock.swift */; };
 		0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */; };
 		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
@@ -85,6 +87,8 @@
 		0FC5A5AD2A0E67430005955E /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
 		0FC5A5AF2A0E680F0005955E /* DayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
 		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerView.swift; sourceTree = "<group>"; };
+		8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerViewModel.swift; sourceTree = "<group>"; };
 		0FC5A5B52A0E7F8C0005955E /* DayEntryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayEntryMock.swift; sourceTree = "<group>"; };
 		0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */,
+				8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 		0FC5A5A42A0E60C70005955E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */,
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
 				99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */,
 				99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */,
@@ -437,6 +443,7 @@
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
 				BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
+				8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
 				99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */,
@@ -450,6 +457,7 @@
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
+				8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */,
 				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
 				BC773C362A0E872400499D02 /* SettingsViewModel.swift in Sources */,
 			);
