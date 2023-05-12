@@ -10,11 +10,15 @@ import SwiftUI
 @main
 struct CHECKTimeApp: App {
     let persistenceController = PersistenceController.shared
+    @Environment(\.scenePhase) var schenePhase
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+        .onChange(of: ScenePhase) { newValue in
+            persistenceController.save()
         }
     }
 }
