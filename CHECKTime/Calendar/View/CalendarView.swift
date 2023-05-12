@@ -27,3 +27,5 @@ struct CalendarView_Previews: PreviewProvider {
         CalendarView(calendarViewModel: CalendarViewModel(activities: [DayActivity(startDate: Date.now, endDate: Date.now.addingTimeInterval(10000), color: "#00000")]))
     }
 }
+
+

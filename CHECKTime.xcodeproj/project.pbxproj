@@ -21,6 +21,11 @@
 		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
 		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
 		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
+		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
+		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
+		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
+		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
+		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
 		BA126C7D2A0E69E400E6D944 /* TagCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA126C7C2A0E69E400E6D944 /* TagCoreDataEntity.swift */; };
 		BA126C7F2A0E6A3F00E6D944 /* ActivityCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA126C7E2A0E6A3F00E6D944 /* ActivityCoreDataEntity.swift */; };
 		BA126C812A0E6A8F00E6D944 /* DayCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA126C802A0E6A8F00E6D944 /* DayCoreDataEntity.swift */; };
@@ -75,12 +80,6 @@
 		0FC5A5942A0E0C2F0005955E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		0FC5A5AB2A0E63A50005955E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		0FC5A5AD2A0E67430005955E /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
-		0FC5A5AF2A0E680F0005955E /* DayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
-		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		BA126C7C2A0E69E400E6D944 /* TagCoreDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCoreDataEntity.swift; sourceTree = "<group>"; };
-		BA126C7E2A0E6A3F00E6D944 /* ActivityCoreDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCoreDataEntity.swift; sourceTree = "<group>"; };
-		BA126C802A0E6A8F00E6D944 /* DayCoreDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCoreDataEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +191,7 @@
 		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BC773C1F2A0E670300499D02 /* View */,
 				0FC5A5A52A0E60CF0005955E /* Model */,
 			);
 			path = Shared;
@@ -238,16 +238,6 @@
 				0FC5A5B12A0E681D0005955E /* Activity.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		BA126C7B2A0E69C500E6D944 /* CoreDataEntities */ = {
-			isa = PBXGroup;
-			children = (
-				BA126C7C2A0E69E400E6D944 /* TagCoreDataEntity.swift */,
-				BA126C7E2A0E6A3F00E6D944 /* ActivityCoreDataEntity.swift */,
-				BA126C802A0E6A8F00E6D944 /* DayCoreDataEntity.swift */,
-			);
-			path = CoreDataEntities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,16 +371,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
-				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
-				BA126C7F2A0E6A3F00E6D944 /* ActivityCoreDataEntity.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
-				BA126C7D2A0E69E400E6D944 /* TagCoreDataEntity.swift in Sources */,
-				BA126C812A0E6A8F00E6D944 /* DayCoreDataEntity.swift in Sources */,
-				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
 			);
