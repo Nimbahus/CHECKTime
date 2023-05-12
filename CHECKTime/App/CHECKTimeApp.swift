@@ -10,16 +10,16 @@ import SwiftUI
 @main
 struct CHECKTimeApp: App {
     let persistenceController = PersistenceController.shared
-    @Environment(\.scenePhase) var schenePhase
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                CalendarView(calendarViewModel: CalendarViewModel(activities: []))
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
-        .onChange(of: ScenePhase) { newValue in
+        .onChange(of: scenePhase) { newValue in
             persistenceController.save()
         }
     }
