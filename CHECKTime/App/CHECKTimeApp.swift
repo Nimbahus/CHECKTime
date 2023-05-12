@@ -14,7 +14,7 @@ struct CHECKTimeApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                CalendarView(calendarViewModel: CalendarViewModel(activities: []))
+                CalendarView(calendarViewModel: CalendarViewModel(dayEntries: []))
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }

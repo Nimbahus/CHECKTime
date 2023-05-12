@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct DayActivity {
+struct DayActivity: Identifiable {
+    let id: UUID = .init()
     var startDate: Date
     var endDate: Date
+    var activity: Activity
     var color: String
     
     var duration: TimeInterval {
@@ -26,7 +28,7 @@ struct DayActivity {
     }
     
     func shortFormat() -> String {
-        //TODO: Implement
+        // TODO: Implement
         return "1h23m"
     }
 }

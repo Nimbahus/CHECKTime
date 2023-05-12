@@ -21,6 +21,8 @@
 		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
 		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
 		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
+		0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B52A0E7F8C0005955E /* DayEntryMock.swift */; };
+		0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */; };
 		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
 		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
@@ -78,6 +80,8 @@
 		0FC5A5AD2A0E67430005955E /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
 		0FC5A5AF2A0E680F0005955E /* DayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
 		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		0FC5A5B52A0E7F8C0005955E /* DayEntryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayEntryMock.swift; sourceTree = "<group>"; };
+		0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
 		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
 		BC773C232A0E675200499D02 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0FC5A5B72A0E81640005955E /* Extension */,
 				BC773C1F2A0E670300499D02 /* View */,
 				0FC5A5A52A0E60CF0005955E /* Model */,
 			);
@@ -233,12 +238,21 @@
 		0FC5A5A52A0E60CF0005955E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0FC5A5B52A0E7F8C0005955E /* DayEntryMock.swift */,
 				0FC5A5AD2A0E67430005955E /* DayEntry.swift */,
 				0FC5A5AF2A0E680F0005955E /* DayActivity.swift */,
 				99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */,
 				0FC5A5B12A0E681D0005955E /* Activity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0FC5A5B72A0E81640005955E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		BC773C1F2A0E670300499D02 /* View */ = {
@@ -399,6 +413,8 @@
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
+				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
+				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
 			);

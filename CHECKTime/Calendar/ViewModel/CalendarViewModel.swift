@@ -9,9 +9,9 @@ import Foundation
 
 @MainActor
 final class CalendarViewModel: ObservableObject {
-    var activities: [DayActivity]
+    var dayEntries: [DayEntry]
     
-    init(activities: [DayActivity]) {
-        self.activities = activities
+    init(dayEntries: [DayEntry]) {
+        self.dayEntries = DayEntryMock.dayEntries
     }
 }

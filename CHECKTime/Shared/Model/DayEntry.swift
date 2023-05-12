@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct DayEntry {
+struct DayEntry: Identifiable {
+    let id = UUID()
     var activities: [DayActivity]
+    
     var duration: TimeInterval {
         return activities.reduce(0) { partialResult, activity in
             partialResult + activity.duration
