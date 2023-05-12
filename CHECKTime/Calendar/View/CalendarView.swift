@@ -12,8 +12,12 @@ struct CalendarView: View {
     @StateObject private var calendarViewModel: CalendarViewModel
     
     var body: some View {
-        Chart {
-            BarMark(x: .value("Start", 0), yStart: .value("Y-Start", 5), yEnd: .value("Y-End", 10))
+        VStack {
+            Chart {
+                BarMark(x: .value("Start", 0), yStart: .value("Y-Start", 5), yEnd: .value("Y-End", 10))
+            }
+            
+            ActivitiesListView(activities: calendarViewModel.activities)
         }
     }
     
@@ -24,7 +28,7 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView(calendarViewModel: CalendarViewModel(activities: [DayActivity(startDate: Date.now, endDate: Date.now.addingTimeInterval(10000), color: "#00000")]))
+        CalendarView(calendarViewModel: CalendarViewModel(activities: [DayActivity(startDate: Date.now, endDate: Date.now.addingTimeInterval(10000), color: "#00000", activityType: .work)]))
     }
 }
 

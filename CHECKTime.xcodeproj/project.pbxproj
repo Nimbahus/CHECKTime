@@ -24,6 +24,7 @@
 		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
 		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
+		F29F9E292A0E848B0034647E /* ActivitiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F9E282A0E848B0034647E /* ActivitiesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
 		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
 		BC773C232A0E675200499D02 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		F29F9E282A0E848B0034647E /* ActivitiesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
+				F29F9E282A0E848B0034647E /* ActivitiesListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
+				F29F9E292A0E848B0034647E /* ActivitiesListView.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,

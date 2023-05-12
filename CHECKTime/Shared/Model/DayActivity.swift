@@ -7,10 +7,13 @@
 
 import Foundation
 
-struct DayActivity {
+struct DayActivity: Identifiable {
+    
+    var id: UUID = UUID()
     var startDate: Date
     var endDate: Date
     var color: String
+    var activityType: Activity
     
     var duration: TimeInterval {
         return (endDate - startDate)
