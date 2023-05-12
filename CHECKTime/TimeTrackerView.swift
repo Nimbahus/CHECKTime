@@ -74,7 +74,7 @@ struct TimeTrackerView: View {
 
                 }
                 Button {
-                    onControllButton()
+                    onControlButton()
                 } label: {
                     Image(systemName: trackerButtonImageSource)
                         .resizable()
@@ -87,7 +87,7 @@ struct TimeTrackerView: View {
         }
     }
     
-    func onControllButton() {
+    func onControlButton() {
         isPaused.toggle()
         if isPaused {
             model.delegate?.didPauseTimer(currentSeconds: model.currentSeconds)
