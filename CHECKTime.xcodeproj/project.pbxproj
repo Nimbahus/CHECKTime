@@ -23,6 +23,7 @@
 		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
 		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
+		BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C262A0E713F00499D02 /* ButtonStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
 		BC773C232A0E675200499D02 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		BC773C262A0E713F00499D02 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BC773C252A0E712E00499D02 /* ButtonStyles */,
 				BC773C1F2A0E670300499D02 /* View */,
 				0FC5A5A52A0E60CF0005955E /* Model */,
 			);
@@ -253,6 +256,14 @@
 				BC773C232A0E675200499D02 /* ToggleButton.swift */,
 			);
 			path = ToggleButton;
+			sourceTree = "<group>";
+		};
+		BC773C252A0E712E00499D02 /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C262A0E713F00499D02 /* ButtonStyles.swift */,
+			);
+			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
+				BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
