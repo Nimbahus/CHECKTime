@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct DailyActivity {
+    var startDate: Date
+    var endDate: Date
+}
+
+@MainActor
+final class CalendarViewModel: ObservableObject {
+    var activities: [DailyActivity]
+    
+    init(activities: [DailyActivity]) {
+        self.activities = activities
+    }
+}
