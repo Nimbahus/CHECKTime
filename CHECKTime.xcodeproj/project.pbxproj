@@ -174,6 +174,7 @@
 		0FC5A5562A0E0C1E0005955E /* CHECKTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A4E847F2A0EA170008384EF /* TimeTracker */,
 				0FC5A5A22A0E60B90005955E /* Calendar */,
 				0FC5A59F2A0E60A60005955E /* App */,
 				0FC5A59D2A0E0C3C0005955E /* Shared */,
@@ -262,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */,
-				8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -270,7 +270,6 @@
 		0FC5A5A42A0E60C70005955E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */,
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
 				99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */,
 				99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */,
@@ -297,6 +296,31 @@
 				BC773C4A2A0E9AC800499D02 /* Date+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8A4E847F2A0EA170008384EF /* TimeTracker */ = {
+			isa = PBXGroup;
+			children = (
+				8A4E84812A0EA189008384EF /* ViewModel */,
+				8A4E84802A0EA17B008384EF /* View */,
+			);
+			path = TimeTracker;
+			sourceTree = "<group>";
+		};
+		8A4E84802A0EA17B008384EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A4E84812A0EA189008384EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BC773C1F2A0E670300499D02 /* View */ = {
