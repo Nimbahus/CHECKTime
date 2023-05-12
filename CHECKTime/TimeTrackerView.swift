@@ -9,24 +9,26 @@ import SwiftUI
 import CoreData
 
 protocol TimeTrackerViewDelegate: AnyObject {
-    func didStartTimer()
-    func didPauseTimer()
+    func didStartTimer(currentSeconds: Int)
+    func didPauseTimer(currentSeconds: Int)
 }
 
 class TimeTrackerViewModel: ObservableObject, Identifiable {
-    @Published var progress: Double
-    @Published var currentTimer: String
+    @Published var maxSeconds: Int
+    @Published var currentSeconds: Int
+    @Published var maxTimeAvailable: Bool
+    @Published var progressBarColor: Color = .pink
     @Published var delegate: TimeTrackerViewDelegate?
 
-    init(progress: Double, currentTimer: String, delegate: TimeTrackerViewDelegate? = nil) {
-        self.progress = progress
-        self.currentTimer = currentTimer
+    init(maxSeconds: Int, currentSeconds: Int = 0, delegate: TimeTrackerViewDelegate? = nil) {
+        self.maxSeconds = maxSeconds
+        self.currentSeconds = currentSeconds
         self.delegate = delegate
+        self.maxTimeAvailable = maxSeconds != 0
     }
     
-    func updateTimer(progress: Double, currentTimer: String) {
-        self.progress = progress
-        self.currentTimer = currentTimer
+    func updateColor(color: Color) {
+        self.progressBarColor = color
     }
 }
 
@@ -34,43 +36,45 @@ struct TimeTrackerView: View {
     @ObservedObject var model: TimeTrackerViewModel
 
     @State var trackerButtonImageSource: String = "play.fill"
-    @State var trackerIsActive: Bool = false
-        
+    @State var isPaused: Bool = true
+    
+    @State var timerText = ""
+    @State var progress: Double = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         VStack {
-            Text(model.currentTimer)
+            Text(timerText)
                 .font(.largeTitle)
                 .bold()
+                .onReceive(timer) { _ in
+                    if !isPaused {
+                        updateTimer()
+                    }
+                }
             Spacer()
             ZStack {
                 ZStack {
                     Circle()
                         .stroke(
-                            Color.pink.opacity(0.5),
+                            model.progressBarColor.opacity(0.5),
                             lineWidth: 30
                         )
                     Circle()
-                        .trim(from: 0, to: CGFloat(model.progress))
+                        .trim(from: 0, to: progress)
                         .stroke(
-                            Color.pink,
+                            model.progressBarColor,
                             style: StrokeStyle(
                                 lineWidth: 30,
                                 lineCap: .round
                             )
                         )
                         .rotationEffect(.degrees(-90))
-                        .animation(.easeOut, value: model.progress)
+                        .animation(.easeOut, value: progress)
 
                 }
                 Button {
-                    trackerIsActive.toggle()
-                    if trackerIsActive {
-                        model.delegate?.didStartTimer()
-                    } else {
-                        model.delegate?.didPauseTimer()
-                    }
-                    trackerButtonImageSource = trackerIsActive ? "pause.fill" : "play.fill"
-                    
+                    onControllButton()
                 } label: {
                     Image(systemName: trackerButtonImageSource)
                         .resizable()
@@ -82,12 +86,42 @@ struct TimeTrackerView: View {
             Spacer()
         }
     }
+    
+    func onControllButton() {
+        isPaused.toggle()
+        if isPaused {
+            model.delegate?.didPauseTimer(currentSeconds: model.currentSeconds)
+            trackerButtonImageSource = "play.fill"
+        } else {
+            model.delegate?.didStartTimer(currentSeconds: model.currentSeconds)
+            trackerButtonImageSource = "pause.fill"
+        }
+    }
+    
+    func updateTimer() {
+        model.currentSeconds += 1
+        if model.maxTimeAvailable && model.currentSeconds < model.maxSeconds {
+            timerText = prettyPrintSecondsLeft(seconds: model.maxSeconds - model.currentSeconds)
+            progress = Double(model.currentSeconds) / Double(model.maxSeconds)
+        } else {
+            timerText = prettyPrintSecondsLeft(seconds: model.currentSeconds)
+            progress = Double(model.currentSeconds % 3600) / Double(3600)
+        }
+    }
+    
+    func prettyPrintSecondsLeft(seconds: Int) -> String {
+        let hour = seconds / 3600
+        let minute = seconds / 60 % 60
+        let second = seconds % 60
+
+        return String(format: "%02i:%02i:%02i", hour, minute, second)
+    }
 }
 
 
 struct TimeTrackerView_Previews: PreviewProvider {
     static var previews: some View {
-        let model = TimeTrackerViewModel(progress: 0.3, currentTimer: "HH:mm:ss")
+        let model = TimeTrackerViewModel(maxSeconds: 28800)
         TimeTrackerView(model: model)
     }
 }
