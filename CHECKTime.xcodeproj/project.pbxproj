@@ -16,6 +16,13 @@
 		0FC5A56F2A0E0C1F0005955E /* CHECKTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A56E2A0E0C1F0005955E /* CHECKTimeTests.swift */; };
 		0FC5A5792A0E0C1F0005955E /* CHECKTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5782A0E0C1F0005955E /* CHECKTimeUITests.swift */; };
 		0FC5A57B2A0E0C1F0005955E /* CHECKTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A57A2A0E0C1F0005955E /* CHECKTimeUITestsLaunchTests.swift */; };
+		0FC5A5902A0E0C2E0005955E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A58F2A0E0C2E0005955E /* ContentView.swift */; };
+		0FC5A5922A0E0C2F0005955E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC5A5912A0E0C2F0005955E /* Assets.xcassets */; };
+		0FC5A5952A0E0C2F0005955E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC5A5942A0E0C2F0005955E /* Preview Assets.xcassets */; };
+		0FC5A5982A0E0C2F0005955E /* CHECKTime-watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0FC5A58B2A0E0C2E0005955E /* CHECKTime-watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0FC5A59E2A0E0C480005955E /* CHECKTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */; };
+		0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */; };
+		0FC5A5A92A0E610D0005955E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5A82A0E610D0005955E /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +40,28 @@
 			remoteGlobalIDString = 0FC5A5532A0E0C1E0005955E;
 			remoteInfo = CHECKTime;
 		};
+		0FC5A5962A0E0C2F0005955E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC5A54C2A0E0C1E0005955E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC5A58A2A0E0C2E0005955E;
+			remoteInfo = "CHECKTime-watchOS Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FC5A59C2A0E0C2F0005955E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0FC5A5982A0E0C2F0005955E /* CHECKTime-watchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0FC5A5542A0E0C1E0005955E /* CHECKTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHECKTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +77,12 @@
 		0FC5A5742A0E0C1F0005955E /* CHECKTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHECKTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC5A5782A0E0C1F0005955E /* CHECKTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeUITests.swift; sourceTree = "<group>"; };
 		0FC5A57A2A0E0C1F0005955E /* CHECKTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0FC5A58B2A0E0C2E0005955E /* CHECKTime-watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHECKTime-watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC5A58F2A0E0C2E0005955E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0FC5A5912A0E0C2F0005955E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FC5A5942A0E0C2F0005955E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		0FC5A5A82A0E610D0005955E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +107,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FC5A5882A0E0C2E0005955E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +123,7 @@
 				0FC5A5562A0E0C1E0005955E /* CHECKTime */,
 				0FC5A56D2A0E0C1F0005955E /* CHECKTimeTests */,
 				0FC5A5772A0E0C1F0005955E /* CHECKTimeUITests */,
+				0FC5A58C2A0E0C2E0005955E /* CHECKTime-watchOS Watch App */,
 				0FC5A5552A0E0C1E0005955E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +134,7 @@
 				0FC5A5542A0E0C1E0005955E /* CHECKTime.app */,
 				0FC5A56A2A0E0C1F0005955E /* CHECKTimeTests.xctest */,
 				0FC5A5742A0E0C1F0005955E /* CHECKTimeUITests.xctest */,
+				0FC5A58B2A0E0C2E0005955E /* CHECKTime-watchOS Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +142,9 @@
 		0FC5A5562A0E0C1E0005955E /* CHECKTime */ = {
 			isa = PBXGroup;
 			children = (
-				0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */,
+				0FC5A5A22A0E60B90005955E /* Calendar */,
+				0FC5A59F2A0E60A60005955E /* App */,
+				0FC5A59D2A0E0C3C0005955E /* Shared */,
 				0FC5A5592A0E0C1E0005955E /* Persistence.swift */,
 				0FC5A55E2A0E0C1E0005955E /* ContentView.swift */,
 				0FC5A5602A0E0C1E0005955E /* Assets.xcassets */,
@@ -135,6 +180,72 @@
 			path = CHECKTimeUITests;
 			sourceTree = "<group>";
 		};
+		0FC5A58C2A0E0C2E0005955E /* CHECKTime-watchOS Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A58F2A0E0C2E0005955E /* ContentView.swift */,
+				0FC5A5912A0E0C2F0005955E /* Assets.xcassets */,
+				0FC5A5932A0E0C2F0005955E /* Preview Content */,
+			);
+			path = "CHECKTime-watchOS Watch App";
+			sourceTree = "<group>";
+		};
+		0FC5A5932A0E0C2F0005955E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5942A0E0C2F0005955E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5A52A0E60CF0005955E /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0FC5A59F2A0E60A60005955E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0FC5A5A22A0E60B90005955E /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5A42A0E60C70005955E /* View */,
+				0FC5A5A32A0E60C10005955E /* ViewModel */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		0FC5A5A32A0E60C10005955E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0FC5A5A42A0E60C70005955E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FC5A5A82A0E610D0005955E /* CalendarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FC5A5A52A0E60CF0005955E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,10 +256,12 @@
 				0FC5A5502A0E0C1E0005955E /* Sources */,
 				0FC5A5512A0E0C1E0005955E /* Frameworks */,
 				0FC5A5522A0E0C1E0005955E /* Resources */,
+				0FC5A59C2A0E0C2F0005955E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0FC5A5972A0E0C2F0005955E /* PBXTargetDependency */,
 			);
 			name = CHECKTime;
 			productName = CHECKTime;
@@ -191,6 +304,23 @@
 			productReference = 0FC5A5742A0E0C1F0005955E /* CHECKTimeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0FC5A58A2A0E0C2E0005955E /* CHECKTime-watchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FC5A5992A0E0C2F0005955E /* Build configuration list for PBXNativeTarget "CHECKTime-watchOS Watch App" */;
+			buildPhases = (
+				0FC5A5872A0E0C2E0005955E /* Sources */,
+				0FC5A5882A0E0C2E0005955E /* Frameworks */,
+				0FC5A5892A0E0C2E0005955E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CHECKTime-watchOS Watch App";
+			productName = "CHECKTime-watchOS Watch App";
+			productReference = 0FC5A58B2A0E0C2E0005955E /* CHECKTime-watchOS Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +342,9 @@
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 0FC5A5532A0E0C1E0005955E;
 					};
+					0FC5A58A2A0E0C2E0005955E = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = 0FC5A54F2A0E0C1E0005955E /* Build configuration list for PBXProject "CHECKTime" */;
@@ -230,6 +363,7 @@
 				0FC5A5532A0E0C1E0005955E /* CHECKTime */,
 				0FC5A5692A0E0C1F0005955E /* CHECKTimeTests */,
 				0FC5A5732A0E0C1F0005955E /* CHECKTimeUITests */,
+				0FC5A58A2A0E0C2E0005955E /* CHECKTime-watchOS Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +392,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FC5A5892A0E0C2E0005955E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC5A5952A0E0C2F0005955E /* Preview Assets.xcassets in Resources */,
+				0FC5A5922A0E0C2F0005955E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,6 +408,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
+				0FC5A5A92A0E610D0005955E /* CalendarView.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
@@ -289,6 +434,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FC5A5872A0E0C2E0005955E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC5A5902A0E0C2E0005955E /* ContentView.swift in Sources */,
+				0FC5A59E2A0E0C480005955E /* CHECKTimeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -301,6 +455,11 @@
 			isa = PBXTargetDependency;
 			target = 0FC5A5532A0E0C1E0005955E /* CHECKTime */;
 			targetProxy = 0FC5A5752A0E0C1F0005955E /* PBXContainerItemProxy */;
+		};
+		0FC5A5972A0E0C2F0005955E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FC5A58A2A0E0C2E0005955E /* CHECKTime-watchOS Watch App */;
+			targetProxy = 0FC5A5962A0E0C2F0005955E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,12 +576,14 @@
 		0FC5A57F2A0E0C1F0005955E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CHECKTime/CHECKTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime/Preview Content\"";
+				DEVELOPMENT_TEAM = 95X6AB835A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -435,10 +596,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,12 +614,14 @@
 		0FC5A5802A0E0C1F0005955E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CHECKTime/CHECKTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime/Preview Content\"";
+				DEVELOPMENT_TEAM = 95X6AB835A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -471,10 +634,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,6 +656,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -515,6 +679,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -572,6 +737,67 @@
 			};
 			name = Release;
 		};
+		0FC5A59A2A0E0C2F0005955E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime-watchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CHECKTime-watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nima.CHECKTime;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		0FC5A59B2A0E0C2F0005955E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime-watchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CHECKTime-watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nima.CHECKTime;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +833,15 @@
 			buildConfigurations = (
 				0FC5A5852A0E0C1F0005955E /* Debug */,
 				0FC5A5862A0E0C1F0005955E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FC5A5992A0E0C2F0005955E /* Build configuration list for PBXNativeTarget "CHECKTime-watchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FC5A59A2A0E0C2F0005955E /* Debug */,
+				0FC5A59B2A0E0C2F0005955E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
