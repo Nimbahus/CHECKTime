@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct StandardButtonStyle: ButtonStyle {
-    
     @Binding var isActive: Bool
     var color: Color
     
     private let cornerRadius: CGFloat = 12.0
     
     func makeBody(configuration: Configuration) -> some View {
-            configuration.label
+        configuration.label
             .font(.title.bold())
             .padding()
             .frame(maxWidth: .infinity)
@@ -28,5 +27,4 @@ struct StandardButtonStyle: ButtonStyle {
             )
             .opacity(configuration.isPressed ? 0.6 : 1.0)
     }
-    
 }

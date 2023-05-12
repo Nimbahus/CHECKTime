@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ToggleButton: View {
-    
     @StateObject private var viewModel: ViewModel
     
     var body: some View {

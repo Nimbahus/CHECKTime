@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1EA292A0E9504005E622E /* ButtonStyles.swift */; };
 		0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */; };
 		0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5592A0E0C1E0005955E /* Persistence.swift */; };
 		0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A55B2A0E0C1E0005955E /* CHECKTime.xcdatamodeld */; };
@@ -28,7 +29,6 @@
 		99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
 		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
-		BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C262A0E713F00499D02 /* ButtonStyles.swift */; };
 		BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C332A0E871A00499D02 /* SettingsView.swift */; };
 		BC773C362A0E872400499D02 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C352A0E872400499D02 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0FB1EA292A0E9504005E622E /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		0FC5A5542A0E0C1E0005955E /* CHECKTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHECKTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeApp.swift; sourceTree = "<group>"; };
 		0FC5A5592A0E0C1E0005955E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -122,6 +123,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FB1EA242A0E944F005E622E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C262A0E713F00499D02 /* ButtonStyles.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		0FB1EA282A0E94F5005E622E /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				0FB1EA292A0E9504005E622E /* ButtonStyles.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
 		0FC5A54B2A0E0C1E0005955E = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +147,7 @@
 				0FC5A5772A0E0C1F0005955E /* CHECKTimeUITests */,
 				0FC5A58C2A0E0C2E0005955E /* CHECKTime-watchOS Watch App */,
 				0FC5A5552A0E0C1E0005955E /* Products */,
+				0FB1EA242A0E944F005E622E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +223,7 @@
 		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0FB1EA282A0E94F5005E622E /* ButtonStyles */,
 				0FC5A5B72A0E81640005955E /* Extension */,
 				BC773C1F2A0E670300499D02 /* View */,
 				0FC5A5A52A0E60CF0005955E /* Model */,
@@ -283,14 +302,6 @@
 				BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */,
 			);
 			path = ToggleButton;
-			sourceTree = "<group>";
-		};
-		BC773C252A0E712E00499D02 /* ButtonStyles */ = {
-			isa = PBXGroup;
-			children = (
-				BC773C262A0E713F00499D02 /* ButtonStyles.swift */,
-			);
-			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 		BC773C322A0E870E00499D02 /* SettingsView */ = {
@@ -435,7 +446,6 @@
 			files = (
 				BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */,
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
-				BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
@@ -446,6 +456,7 @@
 				99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
+				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
