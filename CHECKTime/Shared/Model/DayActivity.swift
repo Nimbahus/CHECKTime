@@ -26,9 +26,4 @@ struct DayActivity: Identifiable {
         
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
-    
-    func shortFormat() -> String {
-        // TODO: Implement
-        return "1h23m"
-    }
 }
