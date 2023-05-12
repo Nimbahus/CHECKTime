@@ -36,6 +36,8 @@
 		BC773C462A0E954900499D02 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C452A0E954800499D02 /* TimerView.swift */; };
 		BC773C482A0E955000499D02 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C472A0E955000499D02 /* TimerViewModel.swift */; };
 		BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C4A2A0E9AC800499D02 /* Date+Extensions.swift */; };
+		BC773C4E2A0E9DEE00499D02 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C4D2A0E9DEE00499D02 /* CategoryViewModel.swift */; };
+		BC773C502A0E9DF700499D02 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C4F2A0E9DF700499D02 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		BC773C452A0E954800499D02 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BC773C472A0E955000499D02 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		BC773C4A2A0E9AC800499D02 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		BC773C4D2A0E9DEE00499D02 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		BC773C4F2A0E9DF700499D02 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +306,7 @@
 		BC773C1F2A0E670300499D02 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC773C4C2A0E9DD100499D02 /* CategoryView */,
 				BC773C442A0E953900499D02 /* TimerView */,
 				BC773C322A0E870E00499D02 /* SettingsView */,
 				BC773C202A0E670C00499D02 /* ToggleButton */,
@@ -334,6 +339,15 @@
 				BC773C472A0E955000499D02 /* TimerViewModel.swift */,
 			);
 			path = TimerView;
+			sourceTree = "<group>";
+		};
+		BC773C4C2A0E9DD100499D02 /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C4D2A0E9DEE00499D02 /* CategoryViewModel.swift */,
+				BC773C4F2A0E9DF700499D02 /* CategoryView.swift */,
+			);
+			path = CategoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,8 +496,10 @@
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
+				BC773C4E2A0E9DEE00499D02 /* CategoryViewModel.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
+				BC773C502A0E9DF700499D02 /* CategoryView.swift in Sources */,
 				BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
