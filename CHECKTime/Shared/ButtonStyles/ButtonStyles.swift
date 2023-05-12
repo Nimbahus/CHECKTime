@@ -24,8 +24,9 @@ struct StandardButtonStyle: ButtonStyle {
             .cornerRadius(cornerRadius)
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(color, lineWidth: 2)
+                    .stroke(isActive ? .clear : color, lineWidth: 2)
             )
+            .opacity(configuration.isPressed ? 0.6 : 1.0)
     }
     
 }
