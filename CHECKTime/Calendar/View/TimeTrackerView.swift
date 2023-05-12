@@ -12,11 +12,14 @@ struct TimeTrackerView: View {
     @ObservedObject var model: TimeTrackerViewModel
 
     @State var trackerButtonImageSource: String = "play.fill"
-    @State var isPaused: Bool = true
     @State var progress: Double = 0
+    @State var timerViewModel: TimerView.ViewModel = TimerView.ViewModel(startDate: Date(), isPaused: true)
     
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         VStack {
+            TimerView(viewModel: timerViewModel)
             Spacer()
             ZStack {
                 ZStack {
@@ -36,7 +39,9 @@ struct TimeTrackerView: View {
                         )
                         .rotationEffect(.degrees(-90))
                         .animation(.easeOut, value: progress)
-
+                        .onReceive(timer) { _ in
+                            updateProgressBar()
+                        }
                 }
                 Button {
                     onControlButton()
@@ -52,9 +57,17 @@ struct TimeTrackerView: View {
         }
     }
     
+    func updateProgressBar() {
+        if model.maxTimeAvailable && timerViewModel.getPassedSeconds() < model.maxSeconds {
+            progress = Double(timerViewModel.getPassedSeconds()) / Double(model.maxSeconds)
+        } else {
+            progress = Double(timerViewModel.getPassedSeconds() % 3600) / Double(3600)
+        }
+    }
+    
     func onControlButton() {
-        isPaused.toggle()
-        if isPaused {
+        timerViewModel.isPaused.toggle()
+        if timerViewModel.isPaused {
             model.delegate?.didPauseTimer(currentSeconds: model.currentSeconds)
             trackerButtonImageSource = "play.fill"
         } else {

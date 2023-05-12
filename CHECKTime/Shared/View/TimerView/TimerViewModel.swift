@@ -15,12 +15,15 @@ extension TimerView {
         @Published var timerText: String?
         @Published var startDate: Date
         @Published var additionalTimeInSeconds: Int?
+        @Published var isPaused: Bool = false
+        @Published var pausedSeconds: Int = 0
         
         private var timer: Timer?
         
-        init(startDate: Date, additionalTimeInSeconds: Int? = nil) {
+        init(startDate: Date, isPaused: Bool = false, additionalTimeInSeconds: Int? = nil) {
             self.timerText = nil
             self.startDate = startDate
+            self.isPaused = isPaused
             self.additionalTimeInSeconds = additionalTimeInSeconds
             self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] _ in
                 self?.updateTimer()
@@ -28,8 +31,15 @@ extension TimerView {
         }
         
         func updateTimer() {
-            
-            timerText = prettyPrintSecondsLeft(seconds: startDate.numberOfSecondsBetween(Date()) + (additionalTimeInSeconds ?? 0))
+            if isPaused {
+                pausedSeconds += 1
+                return
+            }
+            timerText = prettyPrintSecondsLeft(seconds: getPassedSeconds())
+        }
+        
+        func getPassedSeconds() -> Int {
+            startDate.numberOfSecondsBetween(Date()) + (additionalTimeInSeconds ?? 0) - pausedSeconds
         }
 
         private func prettyPrintSecondsLeft(seconds: Int) -> String {
@@ -39,7 +49,5 @@ extension TimerView {
 
             return String(format: "%02i:%02i:%02i", hour, minute, second)
         }
-        
     }
-    
 }
