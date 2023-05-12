@@ -19,7 +19,7 @@ struct CalendarView: View {
                         x: .value("Wochentag", dayEntry.activities[0].startDate),
                         yStart: .value(
                             "",
-                            dif(lhs: dayEntry.activities[0], rhs: activity)
+                            dif(lhs: activity, rhs: dayEntry.activities[0])
                         ),
                         yEnd: .value("", int(activity: activity))
                     )
@@ -44,7 +44,7 @@ struct CalendarView: View {
     }
 
     func dif(lhs: DayActivity, rhs: DayActivity) -> TimeInterval {
-        return (lhs.startDate.timeIntervalSinceReferenceDate - rhs.startDate.timeIntervalSinceReferenceDate) / 3600
+        return abs((lhs.startDate.timeIntervalSinceReferenceDate - rhs.startDate.timeIntervalSinceReferenceDate) / 3600)
     }
     
     func int(activity: DayActivity) -> TimeInterval {
