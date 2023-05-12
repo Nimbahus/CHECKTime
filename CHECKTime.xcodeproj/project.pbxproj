@@ -18,6 +18,9 @@
 		0FC5A57B2A0E0C1F0005955E /* CHECKTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A57A2A0E0C1F0005955E /* CHECKTimeUITestsLaunchTests.swift */; };
 		0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */; };
 		0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AB2A0E63A50005955E /* CalendarView.swift */; };
+		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
+		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
+		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		0FC5A5942A0E0C2F0005955E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		0FC5A5AB2A0E63A50005955E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0FC5A5AD2A0E67430005955E /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
+		0FC5A5AF2A0E680F0005955E /* DayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
+		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,9 @@
 		0FC5A5A52A0E60CF0005955E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0FC5A5AD2A0E67430005955E /* DayEntry.swift */,
+				0FC5A5AF2A0E680F0005955E /* DayActivity.swift */,
+				0FC5A5B12A0E681D0005955E /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,10 +366,13 @@
 			files = (
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
+				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
+				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
+				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +544,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,7 +582,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";

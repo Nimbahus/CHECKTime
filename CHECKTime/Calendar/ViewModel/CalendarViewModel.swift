@@ -7,16 +7,11 @@
 
 import Foundation
 
-struct DailyActivity {
-    var startDate: Date
-    var endDate: Date
-}
-
 @MainActor
 final class CalendarViewModel: ObservableObject {
-    var activities: [DailyActivity]
+    var activities: [DayActivity]
     
-    init(activities: [DailyActivity]) {
+    init(activities: [DayActivity]) {
         self.activities = activities
     }
 }
