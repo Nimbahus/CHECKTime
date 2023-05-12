@@ -21,9 +21,15 @@
 		0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AD2A0E67430005955E /* DayEntry.swift */; };
 		0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AF2A0E680F0005955E /* DayActivity.swift */; };
 		0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B12A0E681D0005955E /* Activity.swift */; };
+		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
+		99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */; };
+		99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */; };
 		8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
 		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
+		BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C262A0E713F00499D02 /* ButtonStyles.swift */; };
+		BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C332A0E871A00499D02 /* SettingsView.swift */; };
+		BC773C362A0E872400499D02 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C352A0E872400499D02 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +84,15 @@
 		0FC5A5AD2A0E67430005955E /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
 		0FC5A5AF2A0E680F0005955E /* DayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
 		0FC5A5B12A0E681D0005955E /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
+		99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekDay.swift"; sourceTree = "<group>"; };
+		99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+CondensedAbbreviatedFormat.swift"; sourceTree = "<group>"; };
 		8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerView.swift; sourceTree = "<group>"; };
 		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
 		BC773C232A0E675200499D02 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		BC773C262A0E713F00499D02 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		BC773C332A0E871A00499D02 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BC773C352A0E872400499D02 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +204,7 @@
 		0FC5A59D2A0E0C3C0005955E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BC773C252A0E712E00499D02 /* ButtonStyles */,
 				BC773C1F2A0E670300499D02 /* View */,
 				0FC5A5A52A0E60CF0005955E /* Model */,
 			);
@@ -227,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
+				99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */,
+				99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +251,7 @@
 			children = (
 				0FC5A5AD2A0E67430005955E /* DayEntry.swift */,
 				0FC5A5AF2A0E680F0005955E /* DayActivity.swift */,
+				99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */,
 				0FC5A5B12A0E681D0005955E /* Activity.swift */,
 			);
 			path = Model;
@@ -244,6 +260,7 @@
 		BC773C1F2A0E670300499D02 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC773C322A0E870E00499D02 /* SettingsView */,
 				BC773C202A0E670C00499D02 /* ToggleButton */,
 			);
 			path = View;
@@ -252,10 +269,27 @@
 		BC773C202A0E670C00499D02 /* ToggleButton */ = {
 			isa = PBXGroup;
 			children = (
-				BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */,
 				BC773C232A0E675200499D02 /* ToggleButton.swift */,
+				BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */,
 			);
 			path = ToggleButton;
+			sourceTree = "<group>";
+		};
+		BC773C252A0E712E00499D02 /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C262A0E713F00499D02 /* ButtonStyles.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		BC773C322A0E870E00499D02 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				BC773C332A0E871A00499D02 /* SettingsView.swift */,
+				BC773C352A0E872400499D02 /* SettingsViewModel.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,18 +423,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */,
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
+				BC773C272A0E713F00499D02 /* ButtonStyles.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
+				99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */,
 				BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */,
+				99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
+				99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
+				BC773C362A0E872400499D02 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +612,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -610,7 +650,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";

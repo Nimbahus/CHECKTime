@@ -11,4 +11,17 @@ struct DayActivity {
     var startDate: Date
     var endDate: Date
     var color: String
+    
+    var duration: TimeInterval {
+        return (endDate - startDate)
+    }
+    
+    func fullFormat() -> String {
+        let delta = Int(duration)
+        let seconds = delta % 60
+        let minutes = (delta / 60) % 60
+        let hours = (delta / 3600)
+        
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
 }
