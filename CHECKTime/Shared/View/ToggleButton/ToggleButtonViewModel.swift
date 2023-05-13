@@ -20,7 +20,14 @@ extension ToggleButton {
         @Published var additionalTimeInSeconds: Int?
         @Published var action: (() -> Void)?
         
-        init(title: String, iconName: String?, isActive: Bool, color: Color, startDate: Date? = nil, additionalTimeInSeconds: Int? = nil, action: (() -> Void)? = nil) {
+        init(title: String,
+             iconName: String?,
+             isActive: Bool,
+             color: Color,
+             startDate: Date? = nil,
+             additionalTimeInSeconds: Int? = nil,
+             action: (() -> Void)? = nil) {
+
             self.title = title
             self.iconName = iconName
             self.isActive = isActive
@@ -38,5 +45,4 @@ extension ToggleButton {
         }
         
     }
-    
 }

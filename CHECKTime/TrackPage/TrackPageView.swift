@@ -13,12 +13,16 @@ struct TrackPageView: View {
     
     var body: some View {
         VStack {
-            TimeTrackerView(model: .init(maxSeconds: viewModel.timePerDayInSeconds))
+            if let timeTrackerViewModel = viewModel.timeTrackerViewModel {
+                TimeTrackerView(model: timeTrackerViewModel)
+            }
             List {
-                ForEach(viewModel.activities, id: \.name) { activity in
-                    ToggleButton(viewModel: .init(title: activity.name, iconName: activity.iconName, isActive: false, color: Color(hex: activity.color) ?? .blue))
-                    .listRowSeparator(.hidden)
-                }
+                ForEach(viewModel.activityButtonMap.map { $0.key }, id: \.id) { activity in
+                    if let viewModel = viewModel.activityButtonMap[activity] {
+                        ToggleButton(viewModel: viewModel)
+                            .listRowSeparator(.hidden)
+                    }
+               }
             }
             .listStyle(PlainListStyle())
         }
@@ -26,8 +30,23 @@ struct TrackPageView: View {
     
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        viewModel.timeTrackerViewModel = .init(maxSeconds: viewModel.timePerDayInSeconds)
+        
+
+        viewModel.activities.forEach { activity in
+            let buttonViewModel = ToggleButton.ViewModel(title: activity.name,
+                                                         iconName: activity.iconName,
+                                                         isActive: false,
+                                                         color: Color(hex: activity.color) ?? .blue)
+            buttonViewModel.action = {
+                viewModel.timeTrackerViewModel?.progressBarColor = Color(hex: activity.color) ?? .blue
+                viewModel.selectedTrackingActivity(activity: activity)
+            }
+            
+            viewModel.activityButtonMap[activity] = buttonViewModel
+        }
+        
     }
-    
 }
 
 struct TrackPageView_Previews: PreviewProvider {

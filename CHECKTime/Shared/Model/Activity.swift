@@ -7,7 +7,21 @@
 
 import Foundation
 
-enum Activity: Hashable {
+enum Activity: Identifiable, Hashable {
+    var id: String {
+        switch self {
+        
+        case .meeting:
+            return "meeting"
+        case .dailyBreak:
+            return "dailyBreak"
+        case .work:
+            return "work"
+        case .custom(let name, _):
+            return name
+        }
+    }
+    
     case meeting
     case dailyBreak
     case work
