@@ -8,22 +8,18 @@
 import SwiftUI
 
 protocol TimeTrackerViewDelegate: AnyObject {
-    func didStartTimer(currentSeconds: Int)
-    func didPauseTimer(currentSeconds: Int)
+    func didStartTimer(timestamp: Date)
+    func didPauseTimer(timestamp: Date)
 }
 
 class TimeTrackerViewModel: ObservableObject, Identifiable {
     @Published var maxSeconds: Int
-    @Published var currentSeconds: Int
-    @Published var maxTimeAvailable: Bool
     @Published var progressBarColor: Color = .pink
     @Published var delegate: TimeTrackerViewDelegate?
 
-    init(maxSeconds: Int, currentSeconds: Int = 0, delegate: TimeTrackerViewDelegate? = nil) {
+    init(maxSeconds: Int, delegate: TimeTrackerViewDelegate? = nil) {
         self.maxSeconds = maxSeconds
-        self.currentSeconds = currentSeconds
         self.delegate = delegate
-        self.maxTimeAvailable = maxSeconds != 0
     }
     
     func updateColor(color: Color) {

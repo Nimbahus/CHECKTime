@@ -58,7 +58,7 @@ struct TimeTrackerView: View {
     }
     
     func updateProgressBar() {
-        if model.maxTimeAvailable && timerViewModel.getPassedSeconds() < model.maxSeconds {
+        if model.maxSeconds != 0 && timerViewModel.getPassedSeconds() < model.maxSeconds {
             progress = Double(timerViewModel.getPassedSeconds()) / Double(model.maxSeconds)
         } else {
             progress = Double(timerViewModel.getPassedSeconds() % 3600) / Double(3600)
@@ -68,10 +68,10 @@ struct TimeTrackerView: View {
     func onControlButton() {
         timerViewModel.isPaused.toggle()
         if timerViewModel.isPaused {
-            model.delegate?.didPauseTimer(currentSeconds: model.currentSeconds)
+            model.delegate?.didPauseTimer(currentSeconds: Date())
             trackerButtonImageSource = "play.fill"
         } else {
-            model.delegate?.didStartTimer(currentSeconds: model.currentSeconds)
+            model.delegate?.didStartTimer(currentSeconds: Date())
             trackerButtonImageSource = "pause.fill"
         }
     }
