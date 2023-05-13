@@ -13,6 +13,7 @@ final class CalendarViewModel: ObservableObject {
     @Published var selectedTimeFrame: TimeFrame
     
     init(dayEntries: [DayEntry]) {
+        //TODO: use parameter instead of mock
         self.dayEntries = DayEntryMock.dayEntries
         self.selectedTimeFrame = .week
     }

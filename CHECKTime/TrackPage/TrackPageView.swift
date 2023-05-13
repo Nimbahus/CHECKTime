@@ -33,7 +33,7 @@ struct TrackPageView: View {
         }
     }
     
-    init(viewModel: ViewModel) {
+    init(viewModel: ViewModel, mainService: MainService) {
         _viewModel = StateObject(wrappedValue: viewModel)
         viewModel.timeTrackerViewModel = .init(maxSeconds: viewModel.timePerDayInSeconds)
         
@@ -56,6 +56,8 @@ struct TrackPageView: View {
 
 struct TrackPageView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackPageView(viewModel: .init())
+        let dummyMainService = MainService(persistenceController: .shared)
+        let viewModel = TrackPageView.ViewModel(mainService: dummyMainService)
+        return TrackPageView(viewModel: viewModel, mainService: dummyMainService)
     }
 }

@@ -17,12 +17,22 @@ extension TrackPageView {
         
         @Published var timeTrackerViewModel: TimeTrackerViewModel?
         @Published var activityButtonMap: [Activity: ToggleButton.ViewModel] = [:]
+        var mainService: MainService
+        
+        init(mainService: MainService) {
+            self.mainService = mainService
+        }
         
         func selectedTrackingActivity(activity: Activity) {
             activityButtonMap.forEach { (activity, viewModel) in
                 viewModel.isActive = false
             }
             activityButtonMap[activity]?.isActive = true
+            
+//            let newActivity = DayActivity(startDate: Date(), tag: Tag.init(label: activity.name, colorHex: activity.color))
+//            let newEntry = DayEntry(id: UUID(), activities: [newActivity])
+//            try! mainService.addDayEntry(newEntry)
+            
         }
     }
 }

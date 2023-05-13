@@ -15,7 +15,7 @@ struct CHECKTimeApp: App {
     var body: some Scene {
         WindowGroup {
             #if os(iOS)
-                CHECKTimeAppiOS()
+                CHECKTimeAppiOS(mainService: mainService)
             #endif
             #if os(macOS)
                 CHECKTimeAppmacOS()

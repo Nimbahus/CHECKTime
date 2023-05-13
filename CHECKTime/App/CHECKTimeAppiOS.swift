@@ -9,15 +9,18 @@ import SwiftUI
 
 #if os(iOS)
     struct CHECKTimeAppiOS: View {
+        var mainService: MainService
+        
         var body: some View {
             NavigationStack {
                 TabView {
-                    TrackPageView(viewModel: .init())
+                    let viewModel = TrackPageView.ViewModel(mainService: mainService)
+                    TrackPageView(viewModel: viewModel, mainService: mainService)
                         .tabItem {
                             Label("Tracker", systemImage: "clock")
                         }
-                
-                    CalendarView(calendarViewModel: CalendarViewModel(dayEntries: []))
+
+                    CalendarView(calendarViewModel: CalendarViewModel(dayEntries: mainService.dayEntries))
                         .tabItem {
                             Label("Calendar", systemImage: "calendar")
                         }
@@ -42,7 +45,8 @@ import SwiftUI
 
     struct CHECKTimeAppiOS_Previews: PreviewProvider {
         static var previews: some View {
-            CHECKTimeAppiOS()
+            let dummyMainService = MainService(persistenceController: .shared)
+            CHECKTimeAppiOS(mainService: dummyMainService)
         }
     }
 #endif
