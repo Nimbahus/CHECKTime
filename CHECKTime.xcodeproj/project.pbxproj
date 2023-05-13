@@ -343,7 +343,6 @@
 		BC773C1F2A0E670300499D02 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC773C4C2A0E9DD100499D02 /* CategoryView */,
 				BC773C442A0E953900499D02 /* TimerView */,
 				BC773C322A0E870E00499D02 /* SettingsView */,
 				BC773C202A0E670C00499D02 /* ToggleButton */,
@@ -376,13 +375,6 @@
 				BC773C472A0E955000499D02 /* TimerViewModel.swift */,
 			);
 			path = TimerView;
-			sourceTree = "<group>";
-		};
-		BC773C4C2A0E9DD100499D02 /* CategoryView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CategoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

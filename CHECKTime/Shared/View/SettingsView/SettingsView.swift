@@ -25,6 +25,10 @@ struct SettingsView: View {
         .padding()
         #endif
     }
+    
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 }
 
 struct SettingsView_Previews: PreviewProvider {

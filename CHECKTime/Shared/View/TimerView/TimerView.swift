@@ -18,6 +18,10 @@ struct TimerView: View {
                 .bold()
         }
     }
+    
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 }
 
 struct TimerView_Previews: PreviewProvider {

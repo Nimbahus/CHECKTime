@@ -16,13 +16,18 @@ struct TrackPageView: View {
             TimeTrackerView(model: .init(maxSeconds: viewModel.timePerDayInSeconds))
             List {
                 ForEach(viewModel.activities, id: \.name) { activity in
-                    ToggleButton(viewModel: .init(title: activity.name, iconName: activity.iconName, isActive: false, color: viewModel.color))
+                    ToggleButton(viewModel: .init(title: activity.name, iconName: activity.iconName, isActive: false, color: Color(hex: activity.color) ?? .blue))
                     .listRowSeparator(.hidden)
                 }
             }
             .listStyle(PlainListStyle())
         }
     }
+    
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
 }
 
 struct TrackPageView_Previews: PreviewProvider {
