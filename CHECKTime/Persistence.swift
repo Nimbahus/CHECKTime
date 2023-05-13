@@ -10,39 +10,23 @@ import CoreData
 
 
 struct PersistenceController {
-    
     static let shared = PersistenceController()
-
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
-
+    
     let container: NSPersistentCloudKitContainer
-
+    
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "CHECKTime")
+        
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
+        let remoteChangeKey = "NSPersistentStoreRemoteChangeNotificationOptionKey"
+        container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: remoteChangeKey)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-
+                
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -55,5 +39,26 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+    }
+    
+    func save() throws {
+        let context = container.viewContext
+        if context.hasChanges {
+            try context.save()
+        }
+    }
+    
+    func delete(_ id: NSManagedObjectID) throws {
+        let context = container.viewContext
+        let object = context.object(with: id)
+        context.delete(object)
+        try save()
+    }
+    
+    func update(_ id: NSManagedObjectID) throws {
+        let context = container.viewContext
+        let object = context.object(with: id)
+        
+        try save()
     }
 }
