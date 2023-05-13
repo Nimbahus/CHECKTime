@@ -10,16 +10,23 @@ import CoreData
 
 @main
 struct CHECKTimeApp: App {
-    @Environment(\.scenePhase) var scenePhase
     @StateObject var mainService: MainService = MainService(persistenceController: PersistenceController.shared)
-    
+
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                CalendarView(calendarViewModel: CalendarViewModel(activities: []))
-                    .environmentObject(mainService)
-            }
+            #if os(iOS)
+                CHECKTimeAppiOS()
+            #endif
+            #if os(macOS)
+                CHECKTimeAppmacOS()
+                    .frame(minWidth: 1000, maxWidth: .infinity, minHeight: 600, maxHeight: .infinity)
+            #endif
         }
+        #if os(macOS)
+            Settings {
+                SettingsView(viewModel: .init())
+            }
+        #endif
     }
 }
 
