@@ -8,37 +8,34 @@
 import Foundation
 
 enum Activity {
-    
     case meeting
     case dailyBreak
     case work
-    case custom(name: String, icon: String?)
+    case custom(name: String, icon: String?, color: String)
     
     var name: String {
-        
         switch self {
-        case .meeting:
-            return "Meeting"
-        case .dailyBreak:
-            return "Break"
-        case .work:
-            return "Work"
-        case .custom(let name, _):
-            return name
+            case .meeting:
+                return "Meeting"
+            case .dailyBreak:
+                return "Break"
+            case .work:
+                return "Work"
+            case let .custom(name, _, _):
+                return name
         }
     }
     
     var iconName: String {
-        
         switch self {
-        case .meeting:
-            return "person.3.sequence.fill"
-        case .dailyBreak:
-            return "cup.and.saucer.fill"
-        case .work:
-            return "desktopcomputer"
-        case .custom(_, let icon):
-            return icon ?? "questionmark.circle.fill"
+            case .meeting:
+                return "person.3.sequence.fill"
+            case .dailyBreak:
+                return "cup.and.saucer.fill"
+            case .work:
+                return "desktopcomputer"
+            case let .custom(_, icon, _):
+                return icon ?? "questionmark.circle.fill"
         }
     }
     
@@ -50,8 +47,8 @@ enum Activity {
                 return "#F4C430"
             case .dailyBreak:
                 return "#740000"
-            case let .custom(string):
-                return string
+            case let .custom(_, _, colorString):
+                return colorString
         }
     }
 }
