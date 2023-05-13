@@ -22,7 +22,7 @@ struct TrackPageView: View {
                     
                 }
                 .buttonStyle(StandardButtonStyle(isActive: $stopButtonActive, color: .black))
-                ForEach(viewModel.activityButtonMap.map { $0.key }, id: \.id) { activity in
+                ForEach(viewModel.activities, id: \.id) { activity in
                     if let viewModel = viewModel.activityButtonMap[activity] {
                         ToggleButton(viewModel: viewModel)
                             .listRowSeparator(.hidden)
