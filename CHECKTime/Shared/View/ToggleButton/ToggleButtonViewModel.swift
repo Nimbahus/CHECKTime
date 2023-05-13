@@ -18,12 +18,14 @@ extension ToggleButton {
         @Published var color: Color
         @Published var action: (() -> Void)?
         
-        init(title: String, iconName: String?, isActive: Bool, color: Color, action: (() -> Void)? = nil) {
+        init(title: String, iconName: String?, isActive: Bool, color: Color) {
             self.title = title
             self.iconName = iconName
             self.isActive = isActive
             self.color = color
-            self.action = action
+            self.action = {
+                self.isActive.toggle()
+            }
         }
         
         convenience init(isActive: Bool) {

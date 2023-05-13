@@ -8,30 +8,37 @@
 import Foundation
 
 enum Activity {
+    
     case meeting
     case dailyBreak
     case work
     case custom(String)
     
     var name: String {
+        
         switch self {
         case .meeting:
             return "Meeting"
         case .dailyBreak:
-            return "Pause"
+            return "Break"
         case .work:
-            return "Arbeiten"
-        case .custom(let text):
-            return text
+            return "Work"
+        case .custom(let name):
+            return name
         }
     }
     
-    var iconName: String? {
+    var iconName: String {
+        
         switch self {
+        case .meeting:
+            return "person.3.sequence.fill"
         case .dailyBreak:
-            return "moon.fill"
-        default:
-            return nil
+            return "cup.and.saucer.fill"
+        case .work:
+            return "desktopcomputer"
+        case .custom(_):
+            return "questionmark.circle.fill"
         }
     }
 }
