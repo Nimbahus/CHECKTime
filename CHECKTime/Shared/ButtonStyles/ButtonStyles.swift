@@ -26,5 +26,6 @@ struct StandardButtonStyle: ButtonStyle {
                     .stroke(isActive ? .clear : color, lineWidth: 2)
             )
             .opacity(configuration.isPressed ? 0.6 : 1.0)
+            .contentShape(Rectangle())
     }
 }
