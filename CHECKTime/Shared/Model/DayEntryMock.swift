@@ -39,26 +39,6 @@ import Foundation
                 .init(
                     activities: [
                         DayActivity(
-                            startDate: tu,
-                            endDate:
-                            Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 10000),
-                            color: Activity.work.color, activityType: .work
-                        ),
-                        DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 10000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
-                            color: Activity.dailyBreak.color, activityType: .dailyBreak
-                        ),
-                        DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 27500),
-                            color: Activity.work.color, activityType: .work
-                        ),
-                    ]
-                ),
-                .init(
-                    activities: [
-                        DayActivity(
                             startDate: we,
                             endDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 10000),
                             color: Activity.work.color, activityType: .work

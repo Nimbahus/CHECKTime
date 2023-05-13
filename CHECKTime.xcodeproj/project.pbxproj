@@ -28,6 +28,8 @@
 		0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */; };
 		8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */; };
 		8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */; };
+		9932FE332A0F8A4E008BB77E /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932FE322A0F8A4E008BB77E /* TimeFrame.swift */; };
+		9932FE352A0F8CF5008BB77E /* Date+StartingDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */; };
 		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
 		99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */; };
 		99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */; };
@@ -102,6 +104,8 @@
 		0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerView.swift; sourceTree = "<group>"; };
 		8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerViewModel.swift; sourceTree = "<group>"; };
+		9932FE322A0F8A4E008BB77E /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
+		9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartingDays.swift"; sourceTree = "<group>"; };
 		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
 		99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekDay.swift"; sourceTree = "<group>"; };
 		99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+CondensedAbbreviatedFormat.swift"; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 		0FC5A5A32A0E60C10005955E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9932FE322A0F8A4E008BB77E /* TimeFrame.swift */,
 				0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
@@ -286,6 +291,7 @@
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
 				F2C532952A0EA40F00DC370C /* ActivitiesListView.swift */,
 				99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */,
+				9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */,
 				99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */,
 			);
 			path = View;
@@ -381,6 +387,13 @@
 				BC773C472A0E955000499D02 /* TimerViewModel.swift */,
 			);
 			path = TimerView;
+			sourceTree = "<group>";
+		};
+		BC773C4C2A0E9DD100499D02 /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,9 +543,11 @@
 				99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
+				9932FE332A0F8A4E008BB77E /* TimeFrame.swift in Sources */,
 				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
 				0F1D2B592A0F8A86008FAE9A /* CHECKTimeAppiOS.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
+				9932FE352A0F8CF5008BB77E /* Date+StartingDays.swift in Sources */,
 				BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
 				BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */,

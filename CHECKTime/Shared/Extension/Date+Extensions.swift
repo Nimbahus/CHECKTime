@@ -10,11 +10,9 @@ import Foundation
 extension Date {
     
     func numberOfSecondsBetween(_ date: Date) -> Int {
-
         var calendar = Calendar.current
         calendar.timeZone = TimeZone.current
         let components = calendar.dateComponents([.second], from: self, to: date)
         return components.second ?? 0
     }
-    
 }
