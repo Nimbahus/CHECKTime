@@ -14,11 +14,16 @@ struct ToggleButton: View {
         Button(action: {
             viewModel.action?()
         }) {
-            HStack {
-                if let iconName = viewModel.iconName {
-                    Image(systemName: iconName)
+            VStack {
+                HStack {
+                    if let iconName = viewModel.iconName {
+                        Image(systemName: iconName)
+                    }
+                    Text(viewModel.title)
                 }
-                Text(viewModel.title)
+                if let startDate = viewModel.startDate {
+                    TimerView(viewModel: .init(startDate: startDate, isPaused: !viewModel.isActive))
+                }
             }
         }
         .buttonStyle(StandardButtonStyle(isActive: $viewModel.isActive, color: viewModel.color))
@@ -32,7 +37,7 @@ struct ToggleButton: View {
 struct ToggleButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ToggleButton(viewModel: .init(isActive: true))
+            ToggleButton(viewModel: .init(isActive: false, startDate: Date()))
             ToggleButton(viewModel: .init(isActive: false))
         }
     }
