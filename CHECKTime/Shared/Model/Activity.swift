@@ -41,4 +41,17 @@ enum Activity {
             return icon ?? "questionmark.circle.fill"
         }
     }
+    
+    var color: String {
+        switch self {
+            case .work:
+                return "#16366F"
+            case .meeting:
+                return "#F4C430"
+            case .dailyBreak:
+                return "#740000"
+            case let .custom(string):
+                return string
+        }
+    }
 }
