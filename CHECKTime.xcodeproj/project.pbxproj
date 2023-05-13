@@ -28,6 +28,7 @@
 		BAD944BC2A0E75F80048C218 /* TagMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944BB2A0E75F80048C218 /* TagMappable.swift */; };
 		BAD944BE2A0E82980048C218 /* ActivityMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944BD2A0E82980048C218 /* ActivityMappable.swift */; };
 		BAD944C02A0E833E0048C218 /* DayMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944BF2A0E833E0048C218 /* DayMappable.swift */; };
+		BAD944C22A0F7D130048C218 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944C12A0F7D130048C218 /* UUIDExtension.swift */; };
 		BC773C222A0E673C00499D02 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		BAD944BB2A0E75F80048C218 /* TagMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagMappable.swift; sourceTree = "<group>"; };
 		BAD944BD2A0E82980048C218 /* ActivityMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMappable.swift; sourceTree = "<group>"; };
 		BAD944BF2A0E833E0048C218 /* DayMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMappable.swift; sourceTree = "<group>"; };
+		BAD944C12A0F7D130048C218 /* UUIDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				BAD944BA2A0E75840048C218 /* DTO */,
 				BAD944B32A0E74570048C218 /* CoreDataEntities */,
 				0FC5A5632A0E0C1E0005955E /* Preview Content */,
+				BAD944C12A0F7D130048C218 /* UUIDExtension.swift */,
 			);
 			path = CHECKTime;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				BAD944C02A0E833E0048C218 /* DayMappable.swift in Sources */,
 				BAD944B72A0E74570048C218 /* DayCoreDataEntity.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
+				BAD944C22A0F7D130048C218 /* UUIDExtension.swift in Sources */,
 				0FC5A5B02A0E680F0005955E /* (null) in Sources */,
 				BAD944B92A0E74570048C218 /* ActivityCoreDataEntity.swift in Sources */,
 				BAD944AF2A0E70020048C218 /* DayActivity.swift in Sources */,

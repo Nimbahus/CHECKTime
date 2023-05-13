@@ -8,5 +8,6 @@
 import Foundation
 
 struct DayEntry {
+    let id: UUID
     var activities: [DayActivity]
 }

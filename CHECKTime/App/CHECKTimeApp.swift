@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 import CoreData
 
 @main
@@ -28,61 +27,106 @@ struct CHECKTimeApp: App {
 class MainService: ObservableObject {
     @Published var dayEntries: [DayEntry] = []
     @Published var tags: [Tag] = []
+    
     let persistenceController: PersistenceController
     
     init(persistenceController: PersistenceController) {
         self.persistenceController = persistenceController
-        self.dayEntries = getAllDayEntries()
-        self.tags = getAllTags()
+        addRemoteChangeObserver()
+        fetchAllDayEntries()
+        fetchAllTags()
     }
     
-    func getAllDayEntries() -> [DayEntry] {
+    deinit {
+        removeRemoteChangeObserver()
+    }
+    
+    private func addRemoteChangeObserver() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleRemoteChange),
+            name: NSNotification.Name(rawValue: "NSPersistentStoreRemoteChangeNotification"),
+            object: persistenceController.container.persistentStoreCoordinator
+        )
+    }
+    
+    private func removeRemoteChangeObserver() {
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name(rawValue: "NSPersistentStoreRemoteChangeNotification"),
+            object: persistenceController.container.persistentStoreCoordinator
+        )
+    }
+    
+    @objc
+    private func handleRemoteChange() {
+        fetchAllDayEntries()
+        fetchAllTags()
+    }
+    
+    func fetchAllDayEntries() {
         let fetchRequest = NSFetchRequest<DayCoreDataEntity>(entityName: "CHECKTime")
         let results = try? persistenceController.container.viewContext.fetch(fetchRequest)
-        return results?.compactMap { DayMappable().map(entity: $0) } ?? []
+        dayEntries = results?.compactMap { DayMappable().map(entity: $0) } ?? []
     }
     
-    func getAllTags() -> [Tag] {
+    func addDayEntry(_ dayEntry: DayEntry) throws {
+        dayEntries.append(dayEntry)
+        
+        let viewContext = persistenceController.container.viewContext
+        let activityEntities = dayEntry.activities.map {
+            let activityEntity = ActivityCoreDataEntity(context: viewContext)
+            activityEntity.start = $0.startDate
+            activityEntity.end = $0.endDate
+            let tagEntity = TagCoreDataEntity(context: viewContext)
+            tagEntity.label = $0.tag?.label?.getStringValue()
+            tagEntity.colorHex = $0.tag?.colorHex ?? "#FFFFFF"
+            activityEntity.tag = tagEntity
+            return activityEntity
+        }
+        let dayEntity = DayCoreDataEntity(context: viewContext)
+        dayEntity.activities = Set(activityEntities)
+        
+        try persistenceController.save()
+    }
+    
+    func deleteDayEntry(_ dayEntry: DayEntry) throws {
+        dayEntries.removeAll(where: { dayEntry.id == $0.id })
+        guard
+            let objectID = dayEntry.id.managedObjectID(in: persistenceController.container.persistentStoreCoordinator)
+        else {
+            // TODO: Handle error
+            return
+        }
+        try persistenceController.delete(objectID)
+    }
+    
+    func updateDayEntry(_ dayEntry: DayEntry) throws {
+        try deleteDayEntry(dayEntry)
+        try addDayEntry(dayEntry)
+        fetchAllDayEntries()
+    }
+    
+    func fetchAllTags() {
         let fetchRequest = NSFetchRequest<TagCoreDataEntity>(entityName: "CHECKTime")
         let results = try? persistenceController.container.viewContext.fetch(fetchRequest)
-        return results?.compactMap { TagMappable().map(entity: $0) } ?? []
+        tags = results?.compactMap { TagMappable().map(entity: $0) } ?? []
     }
     
-    func saveNewTag(tag: Tag) {
+    func addNewTag(_ tag: Tag) throws {
         tags.append(tag)
-        // TODO: Implement
+        let entity = TagCoreDataEntity(context: persistenceController.container.viewContext)
+        entity.label = tag.label?.getStringValue()
+        entity.colorHex = tag.colorHex ?? "#FFFFFF"
+        try persistenceController.save()
     }
     
-    // TODO: Other CRUD operations
-    
-    
-    // TODO: Obsolete
-//    @Published var activities: Double?
-//    @Published var items: FetchedResults<DayCoreDataEntity>?
-//
-//    var cancellables = Set<AnyCancellable>()
-//
-//    init(items: FetchedResults<DayCoreDataEntity>?) {
-//        self.items = items
-//        subscribeToActivitiesChanges()
-//        subscribeToCoreDataChanges()
-//    }
-//
-//    private func subscribeToActivitiesChanges() {
-//        $activities
-//            .sink { _ in
-//
-//            }
-//            .store(in: &cancellables)
-//
-//    }
-//
-//    private func subscribeToCoreDataChanges() {
-//        $items
-//            .sink { _ in
-//
-//            }
-//            .store(in: &cancellables)
-//
-//    }
+    func deleteTag(_ tag: Tag) throws {
+        tags.removeAll(where: { tag.id == $0.id })
+        guard let objectID = tag.id.managedObjectID(in: persistenceController.container.persistentStoreCoordinator) else {
+            // TODO: Handle error
+            return
+        }
+        try persistenceController.delete(objectID)
+    }
 }

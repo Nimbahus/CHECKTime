@@ -8,6 +8,7 @@
 import Foundation
 
 struct DayActivity {
+    let id: UUID
     let startDate: Date?
     let endDate: Date?
     let tag: Tag?

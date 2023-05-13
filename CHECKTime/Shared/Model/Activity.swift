@@ -23,11 +23,17 @@ struct Tag {
         case work
         case custom(String)
     }
-        
+    
+    let id: UUID
     var label: WorkType?
     let colorHex: String?
     
-    init(label: String?, colorHex: String?) {
+    init(
+        id: UUID,
+        label: String?,
+        colorHex: String?
+    ) {
+        self.id = id
         self.colorHex = colorHex
         self.label = labelToWorkType(label: label)
     }
@@ -48,6 +54,24 @@ struct Tag {
             
         default:
             return .custom(label)
+        }
+    }
+}
+
+extension Tag.WorkType {
+    func getStringValue() -> String {
+        switch self {
+        case .meeting:
+            return "meeting"
+            
+        case .dailyBreak:
+            return "dailyBreak"
+            
+        case .work:
+            return "work"
+            
+        case .custom(let string):
+            return string
         }
     }
 }
