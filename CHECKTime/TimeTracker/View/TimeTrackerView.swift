@@ -61,7 +61,7 @@ struct TimeTrackerView: View {
         if model.maxSeconds != 0 && timerViewModel.getPassedSeconds() < model.maxSeconds {
             progress = Double(timerViewModel.getPassedSeconds()) / Double(model.maxSeconds)
         } else {
-            progress = Double(timerViewModel.getPassedSeconds() % 3600) / Double(3600)
+            progress = (Double(timerViewModel.getPassedSeconds() % 3600) / Double(3600)).truncatingRemainder(dividingBy: 1)
         }
     }
     
