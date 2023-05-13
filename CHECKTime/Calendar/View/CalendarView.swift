@@ -37,8 +37,7 @@ struct CalendarView: View {
                                 .font(.footnote)
                                 .foregroundColor(.white)
                         }
-                        .foregroundStyle(Color(uiColor: UIColor.fromHex(hexString: activity.color))
-                        )
+                        .foregroundStyle(Color(hex: activity.color) ?? .blue)
                     }
                 }
             }
