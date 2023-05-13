@@ -8,7 +8,7 @@
 import Foundation
 
 struct DayActivity {
-    var startDate: Date
-    var endDate: Date
-    var color: String
+    let startDate: Date?
+    let endDate: Date?
+    let tag: Tag?
 }

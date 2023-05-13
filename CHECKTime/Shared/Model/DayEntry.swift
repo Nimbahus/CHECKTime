@@ -8,7 +8,5 @@
 import Foundation
 
 struct DayEntry {
-    var startDate: Date
-    var endDate: Date
     var activities: [DayActivity]
 }

@@ -19,10 +19,15 @@
 		0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */; };
 		0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5AB2A0E63A50005955E /* CalendarView.swift */; };
 		0FC5A5B02A0E680F0005955E /* (null) in Sources */ = {isa = PBXBuildFile; };
-		BAD944AA2A0E6FE20048C218 /* CoreDataEntities in Resources */ = {isa = PBXBuildFile; fileRef = BAD944A92A0E6FE20048C218 /* CoreDataEntities */; };
 		BAD944AE2A0E70020048C218 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944AB2A0E70020048C218 /* Activity.swift */; };
 		BAD944AF2A0E70020048C218 /* DayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944AC2A0E70020048C218 /* DayActivity.swift */; };
 		BAD944B02A0E70020048C218 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944AD2A0E70020048C218 /* DayEntry.swift */; };
+		BAD944B72A0E74570048C218 /* DayCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944B42A0E74570048C218 /* DayCoreDataEntity.swift */; };
+		BAD944B82A0E74570048C218 /* TagCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944B52A0E74570048C218 /* TagCoreDataEntity.swift */; };
+		BAD944B92A0E74570048C218 /* ActivityCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944B62A0E74570048C218 /* ActivityCoreDataEntity.swift */; };
+		BAD944BC2A0E75F80048C218 /* TagMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944BB2A0E75F80048C218 /* TagMappable.swift */; };
+		BAD944BE2A0E82980048C218 /* ActivityMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944BD2A0E82980048C218 /* ActivityMappable.swift */; };
+		BAD944C02A0E833E0048C218 /* DayMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD944BF2A0E833E0048C218 /* DayMappable.swift */; };
 		BC773C222A0E673C00499D02 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
@@ -75,10 +80,15 @@
 		0FC5A5942A0E0C2F0005955E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		0FC5A5AB2A0E63A50005955E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		BAD944A92A0E6FE20048C218 /* CoreDataEntities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CoreDataEntities; path = CHECKTime/CoreDataEntities; sourceTree = SOURCE_ROOT; };
 		BAD944AB2A0E70020048C218 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		BAD944AC2A0E70020048C218 /* DayActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayActivity.swift; sourceTree = "<group>"; };
 		BAD944AD2A0E70020048C218 /* DayEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
+		BAD944B42A0E74570048C218 /* DayCoreDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCoreDataEntity.swift; sourceTree = "<group>"; };
+		BAD944B52A0E74570048C218 /* TagCoreDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCoreDataEntity.swift; sourceTree = "<group>"; };
+		BAD944B62A0E74570048C218 /* ActivityCoreDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCoreDataEntity.swift; sourceTree = "<group>"; };
+		BAD944BB2A0E75F80048C218 /* TagMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagMappable.swift; sourceTree = "<group>"; };
+		BAD944BD2A0E82980048C218 /* ActivityMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMappable.swift; sourceTree = "<group>"; };
+		BAD944BF2A0E833E0048C218 /* DayMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMappable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +148,8 @@
 				0FC5A5602A0E0C1E0005955E /* Assets.xcassets */,
 				0FC5A5622A0E0C1E0005955E /* CHECKTime.entitlements */,
 				0FC5A55B2A0E0C1E0005955E /* CHECKTime.xcdatamodeld */,
-				BAD944A92A0E6FE20048C218 /* CoreDataEntities */,
+				BAD944BA2A0E75840048C218 /* DTO */,
+				BAD944B32A0E74570048C218 /* CoreDataEntities */,
 				0FC5A5632A0E0C1E0005955E /* Preview Content */,
 			);
 			path = CHECKTime;
@@ -236,6 +247,26 @@
 				BAD944AD2A0E70020048C218 /* DayEntry.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BAD944B32A0E74570048C218 /* CoreDataEntities */ = {
+			isa = PBXGroup;
+			children = (
+				BAD944B42A0E74570048C218 /* DayCoreDataEntity.swift */,
+				BAD944B52A0E74570048C218 /* TagCoreDataEntity.swift */,
+				BAD944B62A0E74570048C218 /* ActivityCoreDataEntity.swift */,
+			);
+			path = CoreDataEntities;
+			sourceTree = "<group>";
+		};
+		BAD944BA2A0E75840048C218 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BAD944BB2A0E75F80048C218 /* TagMappable.swift */,
+				BAD944BD2A0E82980048C218 /* ActivityMappable.swift */,
+				BAD944BF2A0E833E0048C218 /* DayMappable.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC5A5652A0E0C1E0005955E /* Preview Assets.xcassets in Resources */,
-				BAD944AA2A0E6FE20048C218 /* CoreDataEntities in Resources */,
 				0FC5A5612A0E0C1E0005955E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,16 +400,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD944BE2A0E82980048C218 /* ActivityMappable.swift in Sources */,
 				BC773C222A0E673C00499D02 /* (null) in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				BAD944B02A0E70020048C218 /* DayEntry.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
+				BAD944B82A0E74570048C218 /* TagCoreDataEntity.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
+				BAD944BC2A0E75F80048C218 /* TagMappable.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				BAD944AE2A0E70020048C218 /* Activity.swift in Sources */,
+				BAD944C02A0E833E0048C218 /* DayMappable.swift in Sources */,
+				BAD944B72A0E74570048C218 /* DayCoreDataEntity.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				0FC5A5B02A0E680F0005955E /* (null) in Sources */,
+				BAD944B92A0E74570048C218 /* ActivityCoreDataEntity.swift in Sources */,
 				BAD944AF2A0E70020048C218 /* DayActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
