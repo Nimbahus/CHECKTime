@@ -12,8 +12,13 @@ extension SettingsView {
     @MainActor
     class ViewModel: ObservableObject {
         
-        @Published var hoursPerWeek = 40
-        @Published var showTimerForIndividualCategories = true
+        @Published var hoursPerWeek: Int
+        @Published var color: Color
+        
+        init(hoursPerWeek: Int = 40, color: Color = .blue) {
+            self.hoursPerWeek = hoursPerWeek
+            self.color = color
+        }
         
     }
     

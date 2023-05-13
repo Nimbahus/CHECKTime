@@ -13,14 +13,13 @@ struct SettingsView: View {
     
     var body: some View {
         Form {
-            Section("Allgemein") {
-                TextField("Stunden pro Woche", value: $viewModel.hoursPerWeek, formatter: NumberFormatter())
+            Section("General") {
+                TextField("Hours per week", value: $viewModel.hoursPerWeek, formatter: NumberFormatter())
                     #if os(iOS)
                     .keyboardType(.numberPad)
                     #endif
-                Toggle("Timer für einzelne Kategorien anzeigen", isOn: $viewModel.showTimerForIndividualCategories)
+                ColorPicker("Color", selection: $viewModel.color)
             }
-            
         }
         #if os(macOS)
         .padding()
