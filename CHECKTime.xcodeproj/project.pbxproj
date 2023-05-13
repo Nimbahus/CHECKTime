@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1D2B592A0F8A86008FAE9A /* CHECKTimeAppiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D2B582A0F8A86008FAE9A /* CHECKTimeAppiOS.swift */; };
+		0F1D2B5B2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D2B5A2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift */; };
 		0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1EA292A0E9504005E622E /* ButtonStyles.swift */; };
 		0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */; };
 		0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5592A0E0C1E0005955E /* Persistence.swift */; };
@@ -72,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F1D2B582A0F8A86008FAE9A /* CHECKTimeAppiOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeAppiOS.swift; sourceTree = "<group>"; };
+		0F1D2B5A2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeAppmacOS.swift; sourceTree = "<group>"; };
 		0FB1EA292A0E9504005E622E /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		0FC5A5542A0E0C1E0005955E /* CHECKTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHECKTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeApp.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */,
+				0F1D2B582A0F8A86008FAE9A /* CHECKTimeAppiOS.swift */,
+				0F1D2B5A2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
+				0F1D2B592A0F8A86008FAE9A /* CHECKTimeAppiOS.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
@@ -532,6 +539,7 @@
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */,
+				0F1D2B5B2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift in Sources */,
 				BC773C482A0E955000499D02 /* TimerViewModel.swift in Sources */,
 				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
 				BC773C362A0E872400499D02 /* SettingsViewModel.swift in Sources */,

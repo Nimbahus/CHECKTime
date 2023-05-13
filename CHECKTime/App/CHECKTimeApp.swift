@@ -9,47 +9,22 @@ import SwiftUI
 
 @main
 struct CHECKTimeApp: App {
-    
     let persistenceController = PersistenceController.shared
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                TabView {
-                    TrackPageView(viewModel: .init())
-                        .tabItem {
-                            Label("Tracker", systemImage: "clock")
-                        }
-                    
-                    CalendarView(calendarViewModel: CalendarViewModel(dayEntries: []))
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                        .tabItem {
-                            Label("Calendar", systemImage: "calendar")
-                        }
-                    
-#if os(iOS)
-                    SettingsView(viewModel: .init())
-                        .tabItem {
-                            Label("Settings", systemImage: "gear")
-                        }
-#endif
-                }
-                .onAppear {
-                    // correct the transparency bug for Tab bars
-                    let tabBarAppearance = UITabBarAppearance()
-                    tabBarAppearance.configureWithOpaqueBackground()
-                    UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-                    // correct the transparency bug for Navigation bars
-                    let navigationBarAppearance = UINavigationBarAppearance()
-                    navigationBarAppearance.configureWithOpaqueBackground()
-                    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-                }
+            #if os(iOS)
+                CHECKTimeAppiOS()
+            #endif
+            #if os(macOS)
+                CHECKTimeAppmacOS()
+                    .frame(minWidth: 1000, maxWidth: .infinity, minHeight: 600, maxHeight: .infinity)
+            #endif
+        }
+        #if os(macOS)
+            Settings {
+                SettingsView(viewModel: .init())
             }
-        }
-#if os(macOS)
-        Settings {
-            SettingsView(viewModel: .init())
-        }
-#endif
+        #endif
     }
 }

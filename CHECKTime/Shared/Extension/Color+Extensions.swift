@@ -44,7 +44,12 @@ public extension Color {
 
 extension Color {
     func toHex() -> String? {
-        let uic = UIColor(self)
+        #if os(iOS)
+            let uic = UIColor(self)
+        #endif
+        #if os(macOS)
+            let uic = NSColor(self)
+        #endif
         guard let components = uic.cgColor.components, components.count >= 3 else {
             return nil
         }
