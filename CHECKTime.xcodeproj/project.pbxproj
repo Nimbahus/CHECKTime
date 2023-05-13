@@ -29,6 +29,8 @@
 		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
 		99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */; };
 		99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */; };
+		BC6CF8A62A0F753600CBC70B /* TrackPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF8A52A0F753600CBC70B /* TrackPageView.swift */; };
+		BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF8A72A0F754000CBC70B /* TrackPageViewModel.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
 		BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C232A0E675200499D02 /* ToggleButton.swift */; };
 		BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C332A0E871A00499D02 /* SettingsView.swift */; };
@@ -98,6 +100,8 @@
 		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
 		99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekDay.swift"; sourceTree = "<group>"; };
 		99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+CondensedAbbreviatedFormat.swift"; sourceTree = "<group>"; };
+		BC6CF8A52A0F753600CBC70B /* TrackPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageView.swift; sourceTree = "<group>"; };
+		BC6CF8A72A0F754000CBC70B /* TrackPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageViewModel.swift; sourceTree = "<group>"; };
 		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
 		BC773C232A0E675200499D02 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		BC773C262A0E713F00499D02 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		0FC5A5562A0E0C1E0005955E /* CHECKTime */ = {
 			isa = PBXGroup;
 			children = (
+				BC6CF8A42A0F752400CBC70B /* TrackPage */,
 				8A4E847F2A0EA170008384EF /* TimeTracker */,
 				0FC5A5A22A0E60B90005955E /* Calendar */,
 				0FC5A59F2A0E60A60005955E /* App */,
@@ -321,6 +326,15 @@
 				8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC6CF8A42A0F752400CBC70B /* TrackPage */ = {
+			isa = PBXGroup;
+			children = (
+				BC6CF8A52A0F753600CBC70B /* TrackPageView.swift */,
+				BC6CF8A72A0F754000CBC70B /* TrackPageViewModel.swift */,
+			);
+			path = TrackPage;
 			sourceTree = "<group>";
 		};
 		BC773C1F2A0E670300499D02 /* View */ = {
@@ -494,6 +508,7 @@
 				BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */,
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
+				BC6CF8A62A0F753600CBC70B /* TrackPageView.swift in Sources */,
 				8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */,
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				BC773C462A0E954900499D02 /* TimerView.swift in Sources */,
@@ -507,6 +522,7 @@
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
+				BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
 				BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
@@ -686,7 +702,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -724,7 +740,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nima.CHECKTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";

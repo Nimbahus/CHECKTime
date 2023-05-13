@@ -12,4 +12,26 @@ enum Activity {
     case dailyBreak
     case work
     case custom(String)
+    
+    var name: String {
+        switch self {
+        case .meeting:
+            return "Meeting"
+        case .dailyBreak:
+            return "Pause"
+        case .work:
+            return "Arbeiten"
+        case .custom(let text):
+            return text
+        }
+    }
+    
+    var iconName: String? {
+        switch self {
+        case .dailyBreak:
+            return "moon.fill"
+        default:
+            return nil
+        }
+    }
 }
