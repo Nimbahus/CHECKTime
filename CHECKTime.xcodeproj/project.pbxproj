@@ -48,7 +48,8 @@
 		BC773C462A0E954900499D02 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C452A0E954800499D02 /* TimerView.swift */; };
 		BC773C482A0E955000499D02 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C472A0E955000499D02 /* TimerViewModel.swift */; };
 		BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C4A2A0E9AC800499D02 /* Date+Extensions.swift */; };
-		F2C532962A0EA40F00DC370C /* ActivitiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C532952A0EA40F00DC370C /* ActivitiesListView.swift */; };
+		F290FEF32A0FA8B80077344C /* ActivityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290FEF22A0FA8B80077344C /* ActivityListViewModel.swift */; };
+		F290FEF52A0FAA100077344C /* ActivitiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290FEF42A0FAA100077344C /* ActivitiesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +132,8 @@
 		BC773C452A0E954800499D02 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BC773C472A0E955000499D02 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		BC773C4A2A0E9AC800499D02 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		F2C532952A0EA40F00DC370C /* ActivitiesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesListView.swift; sourceTree = "<group>"; };
+		F290FEF22A0FA8B80077344C /* ActivityListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewModel.swift; sourceTree = "<group>"; };
+		F290FEF42A0FAA100077344C /* ActivitiesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 		0FC5A5A32A0E60C10005955E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F290FEF22A0FA8B80077344C /* ActivityListViewModel.swift */,
 				9932FE322A0F8A4E008BB77E /* TimeFrame.swift */,
 				0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */,
 			);
@@ -302,8 +305,8 @@
 		0FC5A5A42A0E60C70005955E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F290FEF42A0FAA100077344C /* ActivitiesListView.swift */,
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
-				F2C532952A0EA40F00DC370C /* ActivitiesListView.swift */,
 				99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */,
 				9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */,
 				99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */,
@@ -421,13 +424,6 @@
 				BC773C472A0E955000499D02 /* TimerViewModel.swift */,
 			);
 			path = TimerView;
-			sourceTree = "<group>";
-		};
-		BC773C4C2A0E9DD100499D02 /* CategoryView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CategoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,7 +558,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */,
-				F2C532962A0EA40F00DC370C /* ActivitiesListView.swift in Sources */,
 				BABA2FFC2A0F98CA00DB5963 /* DayMappable.swift in Sources */,
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
@@ -575,6 +570,7 @@
 				99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */,
 				BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */,
 				99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */,
+				F290FEF52A0FAA100077344C /* ActivitiesListView.swift in Sources */,
 				BABA30062A0F990F00DB5963 /* UUIDExtension.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
 				99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */,
@@ -591,6 +587,7 @@
 				BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
 				BABA30022A0F98E100DB5963 /* DayCoreDataEntity.swift in Sources */,
+				F290FEF32A0FA8B80077344C /* ActivityListViewModel.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */,
 				0F1D2B5B2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift in Sources */,
@@ -753,7 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime/Preview Content\"";
-				DEVELOPMENT_TEAM = LT9ZA5EXSQ;
+				DEVELOPMENT_TEAM = A8QYST2G2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -791,7 +788,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime/Preview Content\"";
-				DEVELOPMENT_TEAM = LT9ZA5EXSQ;
+				DEVELOPMENT_TEAM = A8QYST2G2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

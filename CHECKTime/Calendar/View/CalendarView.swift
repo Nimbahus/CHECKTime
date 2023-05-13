@@ -40,9 +40,21 @@ struct CalendarView: View {
                 AxisMarks(position: .leading)
             }
             .chartYAxisLabel("Hours")
+            
+            if let dayForActivitiesListView {
+                ActivitiesListView(viewModel: ActivityListViewModel(activities: dayForActivitiesListView.activities))
+            }
         }
     }
 
+    var dayForActivitiesListView: DayEntry? {
+            calendarViewModel.dayEntries.first { dayEntry in
+                guard let date =  dayEntry.date else { return false }
+                return Calendar.current.isDateInToday(date)
+            } ?? calendarViewModel.dayEntries.last
+        }
+
+    
     init(calendarViewModel: CalendarViewModel) {
         _calendarViewModel = StateObject(wrappedValue: calendarViewModel)
     }
