@@ -16,15 +16,17 @@ struct CalendarView: View {
             Chart {
                 ForEach(calendarViewModel.dayEntries) { dayEntry in
                     ForEach(Array(zip(dayEntry.activities.indices, dayEntry.activities)), id: \.0) { _, activity in
+                        let firstActivity = dayEntry.activities.first!
                         BarMark(
                             x: .value("Wochentag", dayEntry.activities[0].startDate),
                             yStart: .value(
                                 "",
-                                dif(lhs: activity, rhs: dayEntry.activities[0])
+                                start(activity: activity, firstActivity: firstActivity)
                             ),
-                            yEnd: .value("", int(activity: activity))
-                        )
-                        .foregroundStyle(activity.color == "work" ? .blue : .red)
+                            yEnd: .value("",
+                                         end(activity: activity, firstActivity: firstActivity
+                                        ))
+                        )                        .foregroundStyle(activity.color == "work" ? .blue : .red)
                     }
                 }
             }
@@ -46,12 +48,12 @@ struct CalendarView: View {
         _calendarViewModel = StateObject(wrappedValue: calendarViewModel)
     }
 
-    func dif(lhs: DayActivity, rhs: DayActivity) -> TimeInterval {
-        return abs((lhs.startDate.timeIntervalSinceReferenceDate - rhs.startDate.timeIntervalSinceReferenceDate) / 3600)
+    func start(activity: DayActivity, firstActivity: DayActivity) -> TimeInterval {
+        return abs((activity.startDate.timeIntervalSinceReferenceDate - firstActivity.startDate.timeIntervalSinceReferenceDate) / 3600)
     }
 
-    func int(activity: DayActivity) -> TimeInterval {
-        return (activity.endDate.timeIntervalSinceReferenceDate - activity.startDate.timeIntervalSinceReferenceDate) / 3600
+    func end(activity: DayActivity, firstActivity: DayActivity) -> TimeInterval {
+        return abs(activity.endDate - firstActivity.startDate) / 3600
     }
 }
 

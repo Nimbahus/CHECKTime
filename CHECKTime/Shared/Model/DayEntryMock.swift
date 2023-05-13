@@ -64,15 +64,15 @@ import Foundation
                             color: "work", activityType: .work
                         ),
                         DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 10000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
+                            startDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 10000),
+                            endDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 15000),
                             color: "break", activityType: .dailyBreak
                         ),
                         DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 22800),
+                            startDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 15000),
+                            endDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 22800),
                             color: "work", activityType: .work
-                        ),
+                        )
                     ]
                 ),
                 .init(
@@ -83,15 +83,15 @@ import Foundation
                             color: "work", activityType: .work
                         ),
                         DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 10000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
+                            startDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 10000),
+                            endDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 15000),
                             color: "break", activityType: .dailyBreak
                         ),
                         DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 28800),
+                            startDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 15000),
+                            endDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 28800),
                             color: "work", activityType: .work
-                        ),
+                        )
                     ]
                 ),
                 .init(
@@ -102,15 +102,15 @@ import Foundation
                             color: "work", activityType: .work
                         ),
                         DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 10000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
+                            startDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 10000),
+                            endDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 15000),
                             color: "break", activityType: .dailyBreak
                         ),
                         DayActivity(
-                            startDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 15000),
-                            endDate: Date(timeIntervalSince1970: tu.timeIntervalSince1970 + 30800),
+                            startDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 15000),
+                            endDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 30800),
                             color: "work", activityType: .work
-                        ),
+                        )
                     ]
                 ),
             ]
