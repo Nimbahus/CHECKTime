@@ -68,10 +68,10 @@ struct TimeTrackerView: View {
     func onControlButton() {
         timerViewModel.isPaused.toggle()
         if timerViewModel.isPaused {
-            model.delegate?.didPauseTimer(currentSeconds: Date())
+            model.delegate?.didPauseTimer(timestamp: Date())
             trackerButtonImageSource = "play.fill"
         } else {
-            model.delegate?.didStartTimer(currentSeconds: Date())
+            model.delegate?.didStartTimer(timestamp: Date())
             trackerButtonImageSource = "pause.fill"
         }
     }
