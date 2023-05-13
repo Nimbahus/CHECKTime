@@ -9,7 +9,6 @@ import Foundation
 
 @MainActor
 final class CalendarViewModel: ObservableObject {
-    
     var dayEntries: [DayEntry]
     
     init(dayEntries: [DayEntry]) {

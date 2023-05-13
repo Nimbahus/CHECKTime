@@ -12,36 +12,37 @@ struct CalendarView: View {
     @StateObject private var calendarViewModel: CalendarViewModel
 
     var body: some View {
-        ScrollView {
+        GroupBox("CHECKTime of the Week") {
             Chart {
                 ForEach(calendarViewModel.dayEntries) { dayEntry in
                     ForEach(Array(zip(dayEntry.activities.indices, dayEntry.activities)), id: \.0) { _, activity in
                         let firstActivity = dayEntry.activities.first!
                         BarMark(
-                            x: .value("Wochentag", dayEntry.activities[0].startDate),
+                            x: .value("Weekday", dayEntry.activities[0].startDate.weekDay()),
                             yStart: .value(
-                                "",
+                                "StartDate",
                                 start(activity: activity, firstActivity: firstActivity)
                             ),
-                            yEnd: .value("",
-                                         end(activity: activity, firstActivity: firstActivity
-                                        ))
-                        )                        .foregroundStyle(activity.color == "work" ? .blue : .red)
+                            yEnd: .value(
+                                "EndDate",
+                                end(
+                                    activity: activity,
+                                    firstActivity: firstActivity
+                                )
+                            ),
+                            width: 50
+                        )
+                        .annotation(position: .overlay, alignment: .top) {
+                            Text(activity.endDate.formatted(date: .omitted, time: .shortened))
+                                .font(.footnote)
+                                .foregroundColor(.white)
+                        }
+                        .foregroundStyle(Color(uiColor: UIColor.fromHex(hexString: activity.color))
+                        )
                     }
                 }
             }
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .day)) { _ in
-                    AxisGridLine().foregroundStyle(.orange)
-                    AxisValueLabel(
-                        format: .dateTime.weekday(),
-                        centered: true
-                    )
-                }
-            }
-            .padding()
         }
-        
     }
 
     init(calendarViewModel: CalendarViewModel) {
@@ -61,8 +62,8 @@ struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarView(calendarViewModel: CalendarViewModel(dayEntries: [
             DayEntry(activities: [
-                DayActivity(startDate: Date.now, endDate: Date.now.addingTimeInterval(10000), color: "#00000", activityType: .work)
-            ])
+                DayActivity(startDate: Date.now, endDate: Date.now.addingTimeInterval(10000), color: "#00000", activityType: .work),
+            ]),
         ]))
     }
 }

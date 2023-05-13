@@ -381,8 +381,6 @@
 		BC773C4C2A0E9DD100499D02 /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
-				BC773C4D2A0E9DEE00499D02 /* CategoryViewModel.swift */,
-				BC773C4F2A0E9DF700499D02 /* CategoryView.swift */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -535,11 +533,9 @@
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
 				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
 				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
-				BC773C4E2A0E9DEE00499D02 /* CategoryViewModel.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
 				BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
-				BC773C502A0E9DF700499D02 /* CategoryView.swift in Sources */,
 				BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
