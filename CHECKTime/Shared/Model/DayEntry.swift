@@ -8,7 +8,7 @@
 import Foundation
 
 struct DayEntry: Identifiable {
-    let id = UUID()
+    let id: UUID
     var activities: [DayActivity]
     
     var date: Date? {

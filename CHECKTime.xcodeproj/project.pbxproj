@@ -13,7 +13,6 @@
 		0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */; };
 		0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5592A0E0C1E0005955E /* Persistence.swift */; };
 		0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A55B2A0E0C1E0005955E /* CHECKTime.xcdatamodeld */; };
-		0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A55E2A0E0C1E0005955E /* ContentView.swift */; };
 		0FC5A5612A0E0C1E0005955E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC5A5602A0E0C1E0005955E /* Assets.xcassets */; };
 		0FC5A5652A0E0C1E0005955E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC5A5642A0E0C1E0005955E /* Preview Assets.xcassets */; };
 		0FC5A56F2A0E0C1F0005955E /* CHECKTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A56E2A0E0C1F0005955E /* CHECKTimeTests.swift */; };
@@ -28,9 +27,18 @@
 		0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */; };
 		8A4E847C2A0E6CE4008384EF /* TimeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */; };
 		8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */; };
+		9932FE332A0F8A4E008BB77E /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932FE322A0F8A4E008BB77E /* TimeFrame.swift */; };
+		9932FE352A0F8CF5008BB77E /* Date+StartingDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */; };
 		99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */; };
 		99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */; };
 		99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */; };
+		BABA2FFB2A0F98CA00DB5963 /* ActivityMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA2FF82A0F98CA00DB5963 /* ActivityMappable.swift */; };
+		BABA2FFC2A0F98CA00DB5963 /* DayMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA2FF92A0F98CA00DB5963 /* DayMappable.swift */; };
+		BABA2FFD2A0F98CA00DB5963 /* TagMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA2FFA2A0F98CA00DB5963 /* TagMappable.swift */; };
+		BABA30022A0F98E100DB5963 /* DayCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA2FFF2A0F98E100DB5963 /* DayCoreDataEntity.swift */; };
+		BABA30032A0F98E100DB5963 /* TagCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA30002A0F98E100DB5963 /* TagCoreDataEntity.swift */; };
+		BABA30042A0F98E100DB5963 /* ActivityCoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA30012A0F98E100DB5963 /* ActivityCoreDataEntity.swift */; };
+		BABA30062A0F990F00DB5963 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA30052A0F990F00DB5963 /* UUIDExtension.swift */; };
 		BC6CF8A62A0F753600CBC70B /* TrackPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF8A52A0F753600CBC70B /* TrackPageView.swift */; };
 		BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF8A72A0F754000CBC70B /* TrackPageViewModel.swift */; };
 		BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */; };
@@ -81,7 +89,6 @@
 		0FC5A5572A0E0C1E0005955E /* CHECKTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHECKTimeApp.swift; sourceTree = "<group>"; };
 		0FC5A5592A0E0C1E0005955E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0FC5A55C2A0E0C1E0005955E /* CHECKTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CHECKTime.xcdatamodel; sourceTree = "<group>"; };
-		0FC5A55E2A0E0C1E0005955E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0FC5A5602A0E0C1E0005955E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC5A5622A0E0C1E0005955E /* CHECKTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CHECKTime.entitlements; sourceTree = "<group>"; };
 		0FC5A5642A0E0C1E0005955E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -102,9 +109,18 @@
 		0FC5A5B82A0E816F0005955E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		8A4E847B2A0E6CE4008384EF /* TimeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerView.swift; sourceTree = "<group>"; };
 		8A4E847D2A0E93D5008384EF /* TimeTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerViewModel.swift; sourceTree = "<group>"; };
+		9932FE322A0F8A4E008BB77E /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
+		9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartingDays.swift"; sourceTree = "<group>"; };
 		99DED62C2A0E7C0D0030E372 /* Date+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Subtraction.swift"; sourceTree = "<group>"; };
 		99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekDay.swift"; sourceTree = "<group>"; };
 		99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+CondensedAbbreviatedFormat.swift"; sourceTree = "<group>"; };
+		BABA2FF82A0F98CA00DB5963 /* ActivityMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMappable.swift; sourceTree = "<group>"; };
+		BABA2FF92A0F98CA00DB5963 /* DayMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayMappable.swift; sourceTree = "<group>"; };
+		BABA2FFA2A0F98CA00DB5963 /* TagMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagMappable.swift; sourceTree = "<group>"; };
+		BABA2FFF2A0F98E100DB5963 /* DayCoreDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCoreDataEntity.swift; sourceTree = "<group>"; };
+		BABA30002A0F98E100DB5963 /* TagCoreDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCoreDataEntity.swift; sourceTree = "<group>"; };
+		BABA30012A0F98E100DB5963 /* ActivityCoreDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCoreDataEntity.swift; sourceTree = "<group>"; };
+		BABA30052A0F990F00DB5963 /* UUIDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		BC6CF8A52A0F753600CBC70B /* TrackPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageView.swift; sourceTree = "<group>"; };
 		BC6CF8A72A0F754000CBC70B /* TrackPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageViewModel.swift; sourceTree = "<group>"; };
 		BC773C212A0E673C00499D02 /* ToggleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonViewModel.swift; sourceTree = "<group>"; };
@@ -184,13 +200,15 @@
 		0FC5A5562A0E0C1E0005955E /* CHECKTime */ = {
 			isa = PBXGroup;
 			children = (
+				BABA30052A0F990F00DB5963 /* UUIDExtension.swift */,
+				BABA2FFE2A0F98E100DB5963 /* CoreDataEntities */,
+				BABA2FF72A0F98CA00DB5963 /* DTO */,
 				BC6CF8A42A0F752400CBC70B /* TrackPage */,
 				8A4E847F2A0EA170008384EF /* TimeTracker */,
 				0FC5A5A22A0E60B90005955E /* Calendar */,
 				0FC5A59F2A0E60A60005955E /* App */,
 				0FC5A59D2A0E0C3C0005955E /* Shared */,
 				0FC5A5592A0E0C1E0005955E /* Persistence.swift */,
-				0FC5A55E2A0E0C1E0005955E /* ContentView.swift */,
 				0FC5A5602A0E0C1E0005955E /* Assets.xcassets */,
 				0FC5A5622A0E0C1E0005955E /* CHECKTime.entitlements */,
 				0FC5A55B2A0E0C1E0005955E /* CHECKTime.xcdatamodeld */,
@@ -275,6 +293,7 @@
 		0FC5A5A32A0E60C10005955E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9932FE322A0F8A4E008BB77E /* TimeFrame.swift */,
 				0FC5A5A62A0E61080005955E /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
@@ -286,6 +305,7 @@
 				0FC5A5AB2A0E63A50005955E /* CalendarView.swift */,
 				F2C532952A0EA40F00DC370C /* ActivitiesListView.swift */,
 				99DED62E2A0E7D2D0030E372 /* Date+WeekDay.swift */,
+				9932FE342A0F8CF5008BB77E /* Date+StartingDays.swift */,
 				99DED6302A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift */,
 			);
 			path = View;
@@ -337,6 +357,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BABA2FF72A0F98CA00DB5963 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BABA2FF82A0F98CA00DB5963 /* ActivityMappable.swift */,
+				BABA2FF92A0F98CA00DB5963 /* DayMappable.swift */,
+				BABA2FFA2A0F98CA00DB5963 /* TagMappable.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BABA2FFE2A0F98E100DB5963 /* CoreDataEntities */ = {
+			isa = PBXGroup;
+			children = (
+				BABA2FFF2A0F98E100DB5963 /* DayCoreDataEntity.swift */,
+				BABA30002A0F98E100DB5963 /* TagCoreDataEntity.swift */,
+				BABA30012A0F98E100DB5963 /* ActivityCoreDataEntity.swift */,
+			);
+			path = CoreDataEntities;
+			sourceTree = "<group>";
+		};
 		BC6CF8A42A0F752400CBC70B /* TrackPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +421,13 @@
 				BC773C472A0E955000499D02 /* TimerViewModel.swift */,
 			);
 			path = TimerView;
+			sourceTree = "<group>";
+		};
+		BC773C4C2A0E9DD100499D02 /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +563,7 @@
 			files = (
 				BC773C342A0E871A00499D02 /* SettingsView.swift in Sources */,
 				F2C532962A0EA40F00DC370C /* ActivitiesListView.swift in Sources */,
+				BABA2FFC2A0F98CA00DB5963 /* DayMappable.swift in Sources */,
 				BC773C222A0E673C00499D02 /* ToggleButtonViewModel.swift in Sources */,
 				0FC5A5A72A0E61080005955E /* CalendarViewModel.swift in Sources */,
 				BC6CF8A62A0F753600CBC70B /* TrackPageView.swift in Sources */,
@@ -523,25 +571,32 @@
 				0FC5A5582A0E0C1E0005955E /* CHECKTimeApp.swift in Sources */,
 				BC773C462A0E954900499D02 /* TimerView.swift in Sources */,
 				0FC5A5AE2A0E67430005955E /* DayEntry.swift in Sources */,
+				BABA2FFD2A0F98CA00DB5963 /* TagMappable.swift in Sources */,
 				99DED6312A0E8AFC0030E372 /* TimeInterval+CondensedAbbreviatedFormat.swift in Sources */,
 				BC773C242A0E675200499D02 /* ToggleButton.swift in Sources */,
 				99DED62D2A0E7C0D0030E372 /* Date+Subtraction.swift in Sources */,
+				BABA30062A0F990F00DB5963 /* UUIDExtension.swift in Sources */,
 				0FC5A5AC2A0E63A50005955E /* CalendarView.swift in Sources */,
 				99DED62F2A0E7D2D0030E372 /* Date+WeekDay.swift in Sources */,
 				0FC5A55A2A0E0C1E0005955E /* Persistence.swift in Sources */,
-				0FC5A55F2A0E0C1E0005955E /* ContentView.swift in Sources */,
+				BABA30032A0F98E100DB5963 /* TagCoreDataEntity.swift in Sources */,
+				9932FE332A0F8A4E008BB77E /* TimeFrame.swift in Sources */,
 				0FB1EA2A2A0E9504005E622E /* ButtonStyles.swift in Sources */,
 				0F1D2B592A0F8A86008FAE9A /* CHECKTimeAppiOS.swift in Sources */,
+				BABA2FFB2A0F98CA00DB5963 /* ActivityMappable.swift in Sources */,
 				0FC5A5B22A0E681D0005955E /* Activity.swift in Sources */,
+				9932FE352A0F8CF5008BB77E /* Date+StartingDays.swift in Sources */,
 				BC6CF8A82A0F754000CBC70B /* TrackPageViewModel.swift in Sources */,
 				0FC5A5B62A0E7F8C0005955E /* DayEntryMock.swift in Sources */,
 				BC773C4B2A0E9AC800499D02 /* Date+Extensions.swift in Sources */,
 				0FC5A5B92A0E816F0005955E /* Color+Extensions.swift in Sources */,
+				BABA30022A0F98E100DB5963 /* DayCoreDataEntity.swift in Sources */,
 				0FC5A55D2A0E0C1E0005955E /* CHECKTime.xcdatamodeld in Sources */,
 				8A4E847E2A0E93D5008384EF /* TimeTrackerViewModel.swift in Sources */,
 				0F1D2B5B2A0F8A8F008FAE9A /* CHECKTimeAppmacOS.swift in Sources */,
 				BC773C482A0E955000499D02 /* TimerViewModel.swift in Sources */,
 				0FC5A5B02A0E680F0005955E /* DayActivity.swift in Sources */,
+				BABA30042A0F98E100DB5963 /* ActivityCoreDataEntity.swift in Sources */,
 				BC773C362A0E872400499D02 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,7 +753,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LT9ZA5EXSQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -736,7 +791,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CHECKTime/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LT9ZA5EXSQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

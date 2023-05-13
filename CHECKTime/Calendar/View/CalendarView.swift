@@ -14,7 +14,7 @@ struct CalendarView: View {
     var body: some View {
         GroupBox("CHECKTime of the Week") {
             Chart {
-                ForEach(calendarViewModel.dayEntries) { dayEntry in
+                ForEach(calendarViewModel.dayEntries(for: .week)) { dayEntry in
                     ForEach(Array(zip(dayEntry.activities.indices, dayEntry.activities)), id: \.0) { _, activity in
                         let firstActivity = dayEntry.activities.first!
                         BarMark(

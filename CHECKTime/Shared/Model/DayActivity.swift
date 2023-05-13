@@ -9,14 +9,13 @@ import Foundation
 
 struct DayActivity: Identifiable {
     
-    let id: UUID = .init()
+    let id: UUID
     var startDate: Date
-    var endDate: Date
-    var color: String
-    var activityType: Activity
+    var endDate: Date?
+    var tag: Tag?
 
     var duration: TimeInterval {
-        return (endDate - startDate)
+        return ((endDate ?? Date()) - startDate)
     }
 
     func fullFormat() -> String {
