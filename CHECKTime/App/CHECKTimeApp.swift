@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct CHECKTimeApp: App {
+    
     let persistenceController = PersistenceController.shared
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            NavigationStack {
                 TabView {
                     TrackPageView(viewModel: .init())
                         .tabItem {
@@ -23,13 +24,13 @@ struct CHECKTimeApp: App {
                     CalendarView(calendarViewModel: CalendarViewModel(dayEntries: []))
                         .environment(\.managedObjectContext, persistenceController.container.viewContext)
                         .tabItem {
-                            Label("Kalender", systemImage: "calendar")
+                            Label("Calendar", systemImage: "calendar")
                         }
                     
                     #if os(iOS)
                     SettingsView(viewModel: .init())
                         .tabItem {
-                            Label("Einstellungen", systemImage: "gear")
+                            Label("Settings", systemImage: "gear")
                         }
                     #endif
                 }

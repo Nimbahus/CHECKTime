@@ -12,7 +12,7 @@ enum Activity {
     case meeting
     case dailyBreak
     case work
-    case custom(String)
+    case custom(name: String, icon: String?)
     
     var name: String {
         
@@ -23,7 +23,7 @@ enum Activity {
             return "Break"
         case .work:
             return "Work"
-        case .custom(let name):
+        case .custom(let name, _):
             return name
         }
     }
@@ -37,8 +37,21 @@ enum Activity {
             return "cup.and.saucer.fill"
         case .work:
             return "desktopcomputer"
-        case .custom(_):
-            return "questionmark.circle.fill"
+        case .custom(_, let icon):
+            return icon ?? "questionmark.circle.fill"
+        }
+    }
+    
+    var color: String {
+        switch self {
+            case .work:
+                return "#16366F"
+            case .meeting:
+                return "#F4C430"
+            case .dailyBreak:
+                return "#740000"
+            case let .custom(string):
+                return string
         }
     }
 }
