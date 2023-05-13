@@ -10,6 +10,7 @@ import SwiftUI
 struct TrackPageView: View {
     
     @StateObject var viewModel: ViewModel
+    @State var stopButtonActive = true // always true
     
     var body: some View {
         VStack {
@@ -17,6 +18,10 @@ struct TrackPageView: View {
                 TimeTrackerView(model: timeTrackerViewModel)
             }
             List {
+				Button("Stop") {
+                    
+                }
+                .buttonStyle(StandardButtonStyle(isActive: $stopButtonActive, color: .black))
                 ForEach(viewModel.activityButtonMap.map { $0.key }, id: \.id) { activity in
                     if let viewModel = viewModel.activityButtonMap[activity] {
                         ToggleButton(viewModel: viewModel)
