@@ -7,11 +7,24 @@
 
 import Foundation
 
-enum Activity {
+enum Activity: Hashable {
     case meeting
     case dailyBreak
     case work
-    case custom(name: String, icon: String?, color: String)
+    case custom(name: String, icon: String?)
+    
+    var color: String {
+        switch self {
+            case .work:
+                return "#16366F"
+            case .meeting:
+                return "#F4C430"
+            case .dailyBreak:
+                return "#740000"
+            case .custom:
+                return ""
+        }
+    }
     
     var name: String {
         switch self {
@@ -21,7 +34,7 @@ enum Activity {
                 return "Break"
             case .work:
                 return "Work"
-            case let .custom(name, _, _):
+            case let .custom(name, _):
                 return name
         }
     }
@@ -34,83 +47,62 @@ enum Activity {
                 return "cup.and.saucer.fill"
             case .work:
                 return "desktopcomputer"
-            case let .custom(_, icon, _):
+            case let .custom(_, icon):
                 return icon ?? "questionmark.circle.fill"
-        }
-    }
-    
-    var color: String {
-        switch self {
-            case .work:
-                return "#16366F"
-            case .meeting:
-                return "#F4C430"
-            case .dailyBreak:
-                return "#740000"
-            case let .custom(_, _, colorString):
-                return colorString
         }
     }
 }
 
-
 // TODO: Communicate this update w/ frontend
-struct Tag {
-    enum WorkType {
-        case meeting
-        case dailyBreak
-        case work
-        case custom(String)
-    }
-    
-    let id: UUID
-    var label: WorkType?
+struct Tag: Identifiable, Hashable {
+    var id: UUID
+    var activity: Activity
     let colorHex: String?
     
     init(
-        id: UUID,
+        id: UUID = UUID(),
         label: String?,
         colorHex: String?
     ) {
         self.id = id
         self.colorHex = colorHex
-        self.label = labelToWorkType(label: label)
+        self.activity = .work
     }
     
-    private func labelToWorkType(label: String?) -> WorkType? {
+    private func labelToWorkType(label: String?) -> Activity {
         guard let label else {
-            return nil
+            return .meeting
         }
         switch label {
-        case "meeting":
-            return .meeting
+            case "meeting":
+                return .meeting
             
-        case "dailyBreak":
-            return .dailyBreak
+            case "dailyBreak":
+                return .dailyBreak
             
-        case "work":
-            return .work
+            case "work":
+                return .work
             
-        default:
-            return .custom(label)
+            default:
+                return .custom(name: label, icon: nil)
         }
     }
 }
 
-extension Tag.WorkType {
+extension Activity {
     func getStringValue() -> String {
         switch self {
-        case .meeting:
-            return "meeting"
+            case .meeting:
+                return "meeting"
             
-        case .dailyBreak:
-            return "dailyBreak"
+            case .dailyBreak:
+                return "dailyBreak"
             
-        case .work:
-            return "work"
+            case .work:
+                return "work"
             
-        case .custom(let string):
-            return string
+            case let .custom(name, _):
+                return name
         }
     }
 }

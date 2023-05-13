@@ -18,78 +18,118 @@ import Foundation
         static let dayEntries: [DayEntry] =
             [
                 .init(
+                    id: UUID(),
                     activities: [
                         DayActivity(
                             startDate: mo,
                             endDate: Date(timeIntervalSince1970: mo.timeIntervalSince1970 + 10000),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: mo.timeIntervalSince1970 + 10000),
                             endDate: Date(timeIntervalSince1970: mo.timeIntervalSince1970 + 15000),
-                            color: Activity.dailyBreak.color, activityType: .dailyBreak
+                            tag: Tag(
+                                label: Activity.dailyBreak.name,
+                                colorHex: Activity.dailyBreak.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: mo.timeIntervalSince1970 + 15000),
                             endDate: Date(timeIntervalSince1970: mo.timeIntervalSince1970 + 28000),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                     ]
                 ),
                 .init(
+                    id: UUID(),
                     activities: [
                         DayActivity(
                             startDate: we,
                             endDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 10000),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 10000),
                             endDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 15000),
-                            color: Activity.dailyBreak.color, activityType: .dailyBreak
+                            tag: Tag(
+                                label: Activity.dailyBreak.name,
+                                colorHex: Activity.dailyBreak.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 15000),
                             endDate: Date(timeIntervalSince1970: we.timeIntervalSince1970 + 22800),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                     ]
                 ),
                 .init(
+                    id: UUID(),
                     activities: [
                         DayActivity(
                             startDate: th,
                             endDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 10000),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 10000),
                             endDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 15000),
-                            color: Activity.dailyBreak.color, activityType: .dailyBreak
+                            tag: Tag(
+                                label: Activity.dailyBreak.name,
+                                colorHex: Activity.dailyBreak.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 15000),
                             endDate: Date(timeIntervalSince1970: th.timeIntervalSince1970 + 28800),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                     ]
                 ),
                 .init(
+                    id: UUID(),
                     activities: [
                         DayActivity(
                             startDate: fr,
                             endDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 10000),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 10000),
                             endDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 15000),
-                            color: Activity.dailyBreak.color, activityType: .dailyBreak
+                            tag: Tag(
+                                label: Activity.dailyBreak.name,
+                                colorHex: Activity.dailyBreak.color
+                            )
                         ),
                         DayActivity(
                             startDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 15000),
                             endDate: Date(timeIntervalSince1970: fr.timeIntervalSince1970 + 30800),
-                            color: Activity.work.color, activityType: .work
+                            tag: Tag(
+                                label: Activity.meeting.name,
+                                colorHex: Activity.meeting.color
+                            )
                         ),
                     ]
                 ),

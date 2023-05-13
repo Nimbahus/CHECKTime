@@ -7,22 +7,20 @@
 
 import CoreData
 
-
-
 struct PersistenceController {
     static let shared = PersistenceController()
     
     let container: NSPersistentCloudKitContainer
     
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "CHECKTime")
+        self.container = NSPersistentCloudKitContainer(name: "CHECKTime")
         
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
         let remoteChangeKey = "NSPersistentStoreRemoteChangeNotificationOptionKey"
         container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: remoteChangeKey)
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

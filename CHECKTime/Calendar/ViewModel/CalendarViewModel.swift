@@ -36,8 +36,8 @@ final class CalendarViewModel: ObservableObject {
     
     private func addMissingDays(for timeFrame: TimeFrame, to entries: [DayEntry]) -> [DayEntry] {
         switch timeFrame {
-        case .week: return addMissingDaysInWeek(to: entries)
-        case .month: return addMissingDaysInMonth(to: entries)
+            case .week: return addMissingDaysInWeek(to: entries)
+            case .month: return addMissingDaysInMonth(to: entries)
         }
     }
     
@@ -61,16 +61,20 @@ final class CalendarViewModel: ObservableObject {
                     continue weekLoop
                 }
             }
-            result.append(DayEntry(activities: [
-                DayActivity(startDate: weekDay, endDate: weekDay, color: Activity.dailyBreak.color, activityType: Activity.dailyBreak)
-            ]))
+            result.append(
+                DayEntry(
+                    id: UUID(),
+                    activities: [
+                        DayActivity(startDate: weekDay, endDate: weekDay, tag: Tag(label: Activity.dailyBreak.name, colorHex: Activity.dailyBreak.color)),
+                    ]
+                ))
         }
         
         return result
     }
     
     private func addMissingDaysInMonth(to entries: [DayEntry]) -> [DayEntry] {
-        //TODO: implement
+        // TODO: implement
         return entries
     }
 }

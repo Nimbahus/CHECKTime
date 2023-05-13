@@ -6,7 +6,7 @@ struct ActivityMappable {
             id: UUID(managedObjectID: entity.objectID) ?? UUID(),
             startDate: entity.start ?? Date(),
             endDate: entity.end,
-            tag: TagMappable().map(entity: entity.tag)
+            tag: TagMappable().map(entity: entity.tag) ?? .init(label: Activity.work.name, colorHex: Activity.work.color)
         )
     }
 }

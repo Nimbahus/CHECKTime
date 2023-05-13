@@ -5,12 +5,12 @@
 //  Created by Nima Rahrakhshan on 12.05.23.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 @main
 struct CHECKTimeApp: App {
-    @StateObject var mainService: MainService = MainService(persistenceController: PersistenceController.shared)
+    @StateObject var mainService: MainService = .init(persistenceController: PersistenceController.shared)
 
     var body: some Scene {
         WindowGroup {
@@ -29,7 +29,6 @@ struct CHECKTimeApp: App {
         #endif
     }
 }
-
 
 class MainService: ObservableObject {
     @Published var dayEntries: [DayEntry] = []
@@ -72,7 +71,7 @@ class MainService: ObservableObject {
     }
     
     func fetchAllDayEntries() {
-        let fetchRequest = NSFetchRequest<DayCoreDataEntity>(entityName: "CHECKTime")
+        let fetchRequest = NSFetchRequest<DayCoreDataEntity>(entityName: "Day")
         let results = try? persistenceController.container.viewContext.fetch(fetchRequest)
         dayEntries = results?.compactMap { DayMappable().map(entity: $0) } ?? []
     }
@@ -86,8 +85,8 @@ class MainService: ObservableObject {
             activityEntity.start = $0.startDate
             activityEntity.end = $0.endDate
             let tagEntity = TagCoreDataEntity(context: viewContext)
-            tagEntity.label = $0.tag?.label?.getStringValue()
-            tagEntity.colorHex = $0.tag?.colorHex ?? "#FFFFFF"
+            tagEntity.label = $0.tag.activity.getStringValue()
+            tagEntity.colorHex = $0.tag.colorHex ?? "#FFFFFF"
             activityEntity.tag = tagEntity
             return activityEntity
         }
@@ -100,8 +99,7 @@ class MainService: ObservableObject {
     func deleteDayEntry(_ dayEntry: DayEntry) throws {
         dayEntries.removeAll(where: { dayEntry.id == $0.id })
         guard
-            let objectID = dayEntry.id.managedObjectID(in: persistenceController.container.persistentStoreCoordinator)
-        else {
+            let objectID = dayEntry.id.managedObjectID(in: persistenceController.container.persistentStoreCoordinator) else {
             // TODO: Handle error
             return
         }
@@ -115,7 +113,7 @@ class MainService: ObservableObject {
     }
     
     func fetchAllTags() {
-        let fetchRequest = NSFetchRequest<TagCoreDataEntity>(entityName: "CHECKTime")
+        let fetchRequest = NSFetchRequest<TagCoreDataEntity>(entityName: "Tag")
         let results = try? persistenceController.container.viewContext.fetch(fetchRequest)
         tags = results?.compactMap { TagMappable().map(entity: $0) } ?? []
     }
@@ -123,7 +121,7 @@ class MainService: ObservableObject {
     func addNewTag(_ tag: Tag) throws {
         tags.append(tag)
         let entity = TagCoreDataEntity(context: persistenceController.container.viewContext)
-        entity.label = tag.label?.getStringValue()
+        entity.label = tag.activity.getStringValue()
         entity.colorHex = tag.colorHex ?? "#FFFFFF"
         try persistenceController.save()
     }

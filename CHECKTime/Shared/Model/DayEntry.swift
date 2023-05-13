@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayEntry: Identifiable {
+struct DayEntry: Identifiable, Hashable {
     let id: UUID
     var activities: [DayActivity]
     

@@ -14,8 +14,8 @@ struct CalendarView: View {
     var body: some View {
         GroupBox("CHECKTime of the Week") {
             Chart {
-                ForEach(calendarViewModel.dayEntries(for: .week)) { dayEntry in
-                    ForEach(Array(zip(dayEntry.activities.indices, dayEntry.activities)), id: \.0) { _, activity in
+                ForEach(DayEntryMock.dayEntries, id: \.self) { dayEntry in
+                    ForEach(dayEntry.activities, id: \.self) { activity in
                         let firstActivity = dayEntry.activities.first!
                         BarMark(
                             x: .value("Weekday", dayEntry.activities[0].startDate.weekDay()),
@@ -32,15 +32,14 @@ struct CalendarView: View {
                             ),
                             width: 50
                         )
-                        .annotation(position: .overlay, alignment: .top) {
-                            Text(activity.endDate.formatted(date: .omitted, time: .shortened))
-                                .font(.footnote)
-                                .foregroundColor(.white)
-                        }
-                        .foregroundStyle(Color(hex: activity.color) ?? .blue)
+                        .foregroundStyle(Color(hex: activity.tag.activity.color) ?? .blue)
                     }
                 }
             }
+            .chartYAxis {
+                AxisMarks(position: .leading)
+            }
+            .chartYAxisLabel("Hours")
         }
     }
 
@@ -53,16 +52,12 @@ struct CalendarView: View {
     }
 
     func end(activity: DayActivity, firstActivity: DayActivity) -> TimeInterval {
-        return abs(activity.endDate - firstActivity.startDate) / 3600
+        return abs((activity.endDate ?? Date.now) - firstActivity.startDate) / 3600
     }
 }
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView(calendarViewModel: CalendarViewModel(dayEntries: [
-            DayEntry(activities: [
-                DayActivity(startDate: Date.now, endDate: Date.now.addingTimeInterval(10000), color: "#00000", activityType: .work),
-            ]),
-        ]))
+        CalendarView(calendarViewModel: CalendarViewModel(dayEntries: DayEntryMock.dayEntries))
     }
 }

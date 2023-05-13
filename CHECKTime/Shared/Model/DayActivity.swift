@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct DayActivity: Identifiable {
-    
-    let id: UUID
+struct DayActivity: Identifiable, Hashable {
+    var id: UUID = .init()
     var startDate: Date
     var endDate: Date?
-    var tag: Tag?
+    var tag: Tag
 
     var duration: TimeInterval {
         return ((endDate ?? Date()) - startDate)
