@@ -21,7 +21,7 @@ extension TimerView {
         private var timer: Timer?
         
         init(startDate: Date, isPaused: Bool = false, additionalTimeInSeconds: Int? = nil) {
-            self.timerText = nil
+            self.timerText = "-"
             self.startDate = startDate
             self.isPaused = isPaused
             self.additionalTimeInSeconds = additionalTimeInSeconds
