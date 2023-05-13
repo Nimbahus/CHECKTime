@@ -18,7 +18,6 @@ import SwiftUI
                         }
                 
                     CalendarView(calendarViewModel: CalendarViewModel(dayEntries: []))
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
                         .tabItem {
                             Label("Calendar", systemImage: "calendar")
                         }
